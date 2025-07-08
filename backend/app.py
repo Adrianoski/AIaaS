@@ -178,7 +178,6 @@ def run_neural_network(network_id):
         # --memory: limita la memoria (es: 512m)
         # --cpus: limita l'uso della CPU (es: 0.5)
         
-        # NOTE: Assicurati che l'immagine Docker 'neural-inference-image' sia stata costruita!
         docker_image_name = 'neural-inference-image'
         
         # Percorsi all'interno del container
@@ -205,9 +204,6 @@ def run_neural_network(network_id):
         app.logger.info(f"Avvio comando Docker: {' '.join(docker_command)}")
 
         # Esegui il comando Docker in background (senza bloccare il server Flask)
-        # In un sistema più robusto, useresti una coda di lavoro (Celery) per questo.
-        # Per ora, usiamo subprocess.Popen per non bloccare la risposta al client.
-        # stderr e stdout vengono reindirizzati per la diagnostica.
         #process = subprocess.Popen(docker_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         # DEBUG: esegue Docker e stampa subito l'output del container
         process = subprocess.Popen(docker_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
@@ -217,11 +213,6 @@ def run_neural_network(network_id):
         print("------ OUTPUT DOCKER END   ------") 
 
         
-        # Non aspettiamo che il processo finisca qui.
-        # L'aggiornamento dello stato e la lettura dei risultati avverranno tramite un meccanismo
-        # separato (es. polling da parte del client o un worker in background).
-        
-        # Potresti salvare il PID del processo o il nome del container per il monitoraggio
         neural_networks_db[network_id]["docker_process_pid"] = process.pid
         neural_networks_db[network_id]["docker_container_name"] = f'inference_{network_id}_{timestamp}'
 
