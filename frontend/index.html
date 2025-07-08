@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carica Rete Neurale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carica la tua Rete Neurale</h1>
+
+        <div class="upload-section">
+            <label for="networkFile" class="file-label">
+                <input type="file" id="networkFile" accept=".onnx, .pt, .pth">
+                <span class="button-text">Seleziona File Rete (.onnx, .pt, .pth)</span>
+                <span id="fileName" class="file-name">Nessun file selezionato</span>
+            </label>
+            <p class="file-tip">Supportati: ONNX (.onnx), PyTorch Script (.pt, .pth)</p>
+
+            <label for="modelName">Nome Modello (opzionale):</label>
+            <input type="text" id="modelName" placeholder="Es: Il mio modello di classificazione">
+
+            <label for="datasetSelect">Seleziona Dataset:</label>
+            <select id="datasetSelect">
+                <option value="esa_anomaly">ESA Anomaly Detection</option>
+            </select>
+
+            <label for="lowerMetrics">Metriche da Minimizzare (es. loss: 0.01):</label>
+            <textarea id="lowerMetrics" rows="3" placeholder="loss: 0.01&#10;inference_time: 0.5"></textarea>
+
+            <label for="higherMetrics">Metriche da Massimizzare (es. accuracy: 0.95):</label>
+            <textarea id="higherMetrics" rows="3" placeholder="accuracy: 0.95"></textarea>
+
+            <button id="uploadButton">Carica Rete</button>
+        </div>
+
+        <div class="status-section">
+            <h2>Stato Caricamento</h2>
+            <p id="uploadStatus">In attesa di caricamento...</p>
+            <progress id="uploadProgressBar" value="0" max="100" style="width: 100%; display: none;"></progress>
+        </div>
+
+        <div class="models-list-section">
+            <h2>Le tue Reti Caricate</h2>
+            <ul id="uploadedModelsList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
