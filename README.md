@@ -5,7 +5,7 @@
 
 Designed for constrained devices such as **Jetson Nano**, **Raspberry Pi 4**, and **Intel NUC**, the system supports CNNs and autoencoders and integrates seamlessly with real-world edge scenarios.
 
----
+
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
 
 
----
+
 
 ## Project Structure
 
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 └── README.md
 ```
 
----
+
 
 ##  How to Run the Server
 
@@ -58,7 +58,7 @@ python app.py
 
 The server will be ready to receive model compression requests via REST API.
 
----
+
 
 ## Client
 
@@ -71,7 +71,7 @@ python client.py
 
 This script sends a model along with desired performance constraints and retrieves the compressed version asynchronously.
 
----
+
 
 ## Web Interface
 
@@ -81,7 +81,7 @@ For a graphical interface, open `frontend/index.html` in a web browser. The fron
 - Set the domain and metric
 - Monitor the compression request and download the reduced model
 
----
+
 
 ## About ImproveNet
 
@@ -89,17 +89,17 @@ The core ImproveNet algorithm is **not included** in this repository due to priv
 
 You may replace the placeholder logic with your own compression framework.
 
----
+
 
 ## Experimental Results
 
 Experiments were conducted on AlexNet, VGG16, VGG19 and autoencoders using CIFAR-10 and ESA-ADB datasets. Results show up to 94.5% reduction in size and over 80% inference speed gain on edge devices like Raspberry Pi, Jetson Nano and Intel NUC. See the full paper for details.
 
----
+
 
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
----
+
 
