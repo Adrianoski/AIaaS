@@ -12,8 +12,8 @@ Designed for constrained devices such as **Jetson Nano**, **Raspberry Pi 4**, an
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/improvenet-service.git
-cd improvenet-service
+git clone https://github.com/Adrianoski/AIaaS.git
+cd AIaaS
 ```
 
 ### 2. Install dependencies
