@@ -7,7 +7,7 @@ Designed for constrained devices such as **Jetson Nano**, **Raspberry Pi 4**, an
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
