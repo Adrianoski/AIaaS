@@ -1,0 +1,6 @@
+torch
+onnxruntime
+numpy
+pandas
+scikit-learn
+torchsummary
