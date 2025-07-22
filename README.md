@@ -1,4 +1,4 @@
-# ImproveNet Service: Neural Network Compression as a Cloud–Edge Service
+# Service-Oriented AI Model Compression for Computing Continuum Environments
 
 ## About
 **ImproveNet Service** is a lightweight and modular system that enables neural network compression via a cloud–edge architecture. Edge devices can send their models to the server with a performance constraint (accuracy or loss), and receive a structurally reduced version ready for deployment, all through a simple asynchronous API.
