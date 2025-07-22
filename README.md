@@ -85,7 +85,7 @@ For a graphical interface, open `frontend/index.html` in a web browser. The fron
 
 ## About ImproveNet
 
-The core ImproveNet algorithm is **not included** in this repository due to privacy and IP restrictions. However, the backend is designed to integrate any compression engine by editing the `inference_script.py`, specifically the compression logic inside.
+The core ImproveNet algorithm is not included in this repository due to a non-disclosure agreement (NDA) that prevents public distribution. However, the backend is modular and designed to support custom compression logic, which can be implemented by modifying the `inference_script.py` file.
 
 You may replace the placeholder logic with your own compression framework.
 
