@@ -1,9 +1,9 @@
 # ImproveNet Service: Neural Network Compression as a Cloud–Edge Service
 
 ## About
-**ImproveNet Service** is a lightweight and modular system that enables real-time neural network compression via a cloud–edge architecture. Edge devices can send their models to the server with a performance constraint (accuracy or loss), and receive a structurally reduced version ready for deployment — all through a simple asynchronous API.
+**ImproveNet Service** is a lightweight and modular system that enables neural network compression via a cloud–edge architecture. Edge devices can send their models to the server with a performance constraint (accuracy or loss), and receive a structurally reduced version ready for deployment, all through a simple asynchronous API.
 
-Designed for constrained devices such as **Jetson Nano**, **Raspberry Pi 4**, and **Intel NUC**, the system supports CNNs and autoencoders and integrates seamlessly with real-world edge scenarios.
+Designed for constrained devices such as **Jetson Nano**, **Raspberry Pi 4**, and **Intel NUC**, the system supports CNNs and networks with only linear or only convolutional layers and integrates  with real-world edge scenarios.
 
 
 
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ##  How to Run the Server
 
-Navigate to the backend directory and launch the Flask server:
+Navigate to the backend directory and launch the Flask server by running
 
 ```bash
 cd backend
@@ -62,7 +62,7 @@ The server will be ready to receive model compression requests via REST API.
 
 ## Client
 
-You can simulate an edge device by running the included client:
+You can simulate an edge device by running the included client
 
 ```bash
 cd backend
