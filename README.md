@@ -1,7 +1,7 @@
 # Service-Oriented AI Model Compression for Computing Continuum Environments
 
 ## About
-This framework is a lightweight and modular system that enables neural network compression via a cloud–edge architecture. Edge devices can send their models to the server with a performance constraint (accuracy or loss), and receive a structurally reduced version ready for deployment, all through a simple asynchronous API.
+This framework is a lightweight and modular system that enables neural network compression via a cloud - edge architecture. Edge devices can send their models to the server with a performance constraint (accuracy or loss), and receive a structurally reduced version ready for deployment, all through a simple asynchronous API.
 
 Designed for constrained devices such as **Jetson Nano**, **Raspberry Pi 4**, and **Intel NUC**, the system supports CNNs and networks with only linear or only convolutional layers and integrates  with real-world edge scenarios.
 
