@@ -40,6 +40,11 @@ pip install -r requirements.txt
 │   ├── index.html             # Main interface
 │   ├── script.js              # Logic for sending model and parameters
 │   └── style.css              # UI styling
+├── experiments/               # Images and log files 
+│   ├── LAEorig.png
+│   ├── LAEred.png
+│   ├── CAEorig.png
+│   ├── CAEred.png 
 │
 ├── requirements.txt           # Python dependencies
 └── README.md
