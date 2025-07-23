@@ -1,0 +1,1656 @@
+nohup: ignoring input
+cuda:0
+Network Improver initialization ...
+-------------------------------------------------------------------------
+Starting process with Accuracy:  0.75
+-------------------------------------------------------------------------
+Epoch 1/100, Train Loss: 1.288161, Train Acc: 53.18%, Val Loss: 0.981702, Val Acc: 64.82%
+Epoch 2/100, Train Loss: 0.861523, Train Acc: 69.46%, Val Loss: 0.789404, Val Acc: 72.25%
+Epoch 3/100, Train Loss: 0.718906, Train Acc: 74.66%, Val Loss: 0.730415, Val Acc: 74.49%
+Epoch 4/100, Train Loss: 0.632068, Train Acc: 78.06%, Val Loss: 0.647075, Val Acc: 77.65%
+Epoch 5/100, Train Loss: 0.563690, Train Acc: 80.40%, Val Loss: 0.562867, Val Acc: 80.58%
+Epoch 6/100, Train Loss: 0.519627, Train Acc: 81.76%, Val Loss: 0.517260, Val Acc: 82.25%
+Epoch 7/100, Train Loss: 0.478964, Train Acc: 83.35%, Val Loss: 0.546500, Val Acc: 80.90%
+Epoch 8/100, Train Loss: 0.447513, Train Acc: 84.38%, Val Loss: 0.590496, Val Acc: 80.14%
+Epoch 9/100, Train Loss: 0.416925, Train Acc: 85.46%, Val Loss: 0.556274, Val Acc: 81.47%
+Epoch 10/100, Train Loss: 0.387226, Train Acc: 86.55%, Val Loss: 0.596966, Val Acc: 79.74%
+Epoch 11/100, Train Loss: 0.365951, Train Acc: 87.17%, Val Loss: 0.445779, Val Acc: 84.38%
+Epoch 12/100, Train Loss: 0.339991, Train Acc: 88.16%, Val Loss: 0.460192, Val Acc: 84.85%
+Epoch 13/100, Train Loss: 0.324618, Train Acc: 88.75%, Val Loss: 0.451215, Val Acc: 84.63%
+Epoch 14/100, Train Loss: 0.310103, Train Acc: 89.21%, Val Loss: 0.430869, Val Acc: 85.20%
+Epoch 15/100, Train Loss: 0.290937, Train Acc: 89.91%, Val Loss: 0.420319, Val Acc: 86.07%
+Epoch 16/100, Train Loss: 0.272535, Train Acc: 90.40%, Val Loss: 0.432089, Val Acc: 85.41%
+Epoch 17/100, Train Loss: 0.261340, Train Acc: 90.72%, Val Loss: 0.413628, Val Acc: 86.77%
+Epoch 18/100, Train Loss: 0.247090, Train Acc: 91.34%, Val Loss: 0.421627, Val Acc: 86.40%
+Epoch 19/100, Train Loss: 0.233725, Train Acc: 91.70%, Val Loss: 0.424246, Val Acc: 85.79%
+Epoch 20/100, Train Loss: 0.224417, Train Acc: 92.16%, Val Loss: 0.402595, Val Acc: 87.18%
+Epoch 21/100, Train Loss: 0.210906, Train Acc: 92.51%, Val Loss: 0.398069, Val Acc: 87.09%
+Epoch 22/100, Train Loss: 0.195274, Train Acc: 93.11%, Val Loss: 0.387587, Val Acc: 87.49%
+Epoch 23/100, Train Loss: 0.191466, Train Acc: 93.20%, Val Loss: 0.463852, Val Acc: 85.34%
+Epoch 24/100, Train Loss: 0.181723, Train Acc: 93.59%, Val Loss: 0.390227, Val Acc: 87.74%
+Epoch 25/100, Train Loss: 0.174916, Train Acc: 93.84%, Val Loss: 0.370563, Val Acc: 88.10%
+Epoch 26/100, Train Loss: 0.162886, Train Acc: 94.29%, Val Loss: 0.406961, Val Acc: 87.50%
+Epoch 27/100, Train Loss: 0.157487, Train Acc: 94.41%, Val Loss: 0.406467, Val Acc: 87.70%
+Epoch 28/100, Train Loss: 0.153666, Train Acc: 94.47%, Val Loss: 0.375271, Val Acc: 88.40%
+Epoch 29/100, Train Loss: 0.144160, Train Acc: 94.92%, Val Loss: 0.400684, Val Acc: 88.51%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.8822}]
+Valore m[value]:  0.8822
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+Conv2d(3, 96, kernel_size=(11, 11), stride=(4, 4))
+BatchNorm aggiornato con 48 feature
+Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+BatchNorm aggiornato con 128 feature
+Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 192 feature
+Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 192 feature
+Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 128 feature
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5}]
+Reduction ratio: 1.0
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 96, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (2): Sequential(
+    (0): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (4): Sequential(
+    (0): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (5): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=9216, out_features=4096, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (7): Sequential(
+    (0): Linear(in_features=4096, out_features=4096, bias=True)
+    (1): ReLU()
+  )
+  (8): Sequential(
+    (0): Linear(in_features=4096, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 48, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(48, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (2): Sequential(
+    (0): Conv2d(128, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (4): Sequential(
+    (0): Conv2d(192, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (5): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=4608, out_features=2048, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (7): Sequential(
+    (0): Linear(in_features=2048, out_features=2048, bias=True)
+    (1): ReLU()
+  )
+  (8): Sequential(
+    (0): Linear(in_features=2048, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 1.352656, Train Acc: 50.37%, Val Loss: 1.011011, Val Acc: 63.92%
+Epoch 2/100, Train Loss: 0.933345, Train Acc: 66.52%, Val Loss: 0.931868, Val Acc: 67.27%
+Epoch 3/100, Train Loss: 0.788081, Train Acc: 72.02%, Val Loss: 0.762189, Val Acc: 73.44%
+Epoch 4/100, Train Loss: 0.706436, Train Acc: 75.09%, Val Loss: 0.750913, Val Acc: 73.55%
+Epoch 5/100, Train Loss: 0.651144, Train Acc: 76.96%, Val Loss: 0.884688, Val Acc: 71.36%
+Epoch 6/100, Train Loss: 0.598916, Train Acc: 79.07%, Val Loss: 0.635809, Val Acc: 78.05%
+Epoch 7/100, Train Loss: 0.561356, Train Acc: 80.34%, Val Loss: 0.662110, Val Acc: 77.62%
+Epoch 8/100, Train Loss: 0.524472, Train Acc: 81.68%, Val Loss: 0.622219, Val Acc: 78.28%
+Epoch 9/100, Train Loss: 0.504208, Train Acc: 82.35%, Val Loss: 0.586170, Val Acc: 79.96%
+Epoch 10/100, Train Loss: 0.476116, Train Acc: 83.42%, Val Loss: 0.511424, Val Acc: 82.42%
+Epoch 11/100, Train Loss: 0.449080, Train Acc: 84.29%, Val Loss: 0.547692, Val Acc: 81.66%
+Epoch 12/100, Train Loss: 0.431168, Train Acc: 85.02%, Val Loss: 0.479356, Val Acc: 83.60%
+Epoch 13/100, Train Loss: 0.406542, Train Acc: 85.86%, Val Loss: 0.564843, Val Acc: 80.58%
+Epoch 14/100, Train Loss: 0.393926, Train Acc: 86.20%, Val Loss: 0.507081, Val Acc: 82.67%
+Epoch 15/100, Train Loss: 0.377171, Train Acc: 86.74%, Val Loss: 0.510677, Val Acc: 82.82%
+Epoch 16/100, Train Loss: 0.355752, Train Acc: 87.51%, Val Loss: 0.511587, Val Acc: 82.78%
+Epoch 17/100, Train Loss: 0.345041, Train Acc: 88.04%, Val Loss: 0.464653, Val Acc: 83.97%
+Epoch 18/100, Train Loss: 0.326116, Train Acc: 88.60%, Val Loss: 0.459117, Val Acc: 84.51%
+Epoch 19/100, Train Loss: 0.319866, Train Acc: 88.76%, Val Loss: 0.432011, Val Acc: 85.36%
+Epoch 20/100, Train Loss: 0.308212, Train Acc: 89.26%, Val Loss: 0.496348, Val Acc: 82.85%
+Epoch 21/100, Train Loss: 0.291810, Train Acc: 89.66%, Val Loss: 0.413641, Val Acc: 85.99%
+Epoch 22/100, Train Loss: 0.283821, Train Acc: 90.12%, Val Loss: 0.443409, Val Acc: 85.13%
+Epoch 23/100, Train Loss: 0.269191, Train Acc: 90.53%, Val Loss: 0.438194, Val Acc: 85.59%
+Epoch 24/100, Train Loss: 0.261577, Train Acc: 90.77%, Val Loss: 0.422333, Val Acc: 85.96%
+Epoch 25/100, Train Loss: 0.251187, Train Acc: 91.01%, Val Loss: 0.495882, Val Acc: 83.92%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.8609}]
+Valore m[value]:  0.8609
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+String Index to remove:  1
+DEVO RIMUOVERE:  {'index': '1', 'type': 'Sequential', 'layers': [{'index': '1.0', 'type': 'Conv2d', 'args': {'in_channels': 48, 'out_channels': 128, 'kernel_size': (5, 5), 'stride': (1, 1), 'padding': (2, 2), 'dilation': (1, 1), 'groups': 1, 'padding_mode': 'zeros'}}, {'index': '1.1', 'type': 'BatchNorm2d', 'args': {'num_features': 128, 'eps': 1e-05, 'momentum': 0.1, 'affine': True, 'track_running_stats': True}}, {'index': '1.2', 'type': 'ReLU', 'args': {'inplace': False}}, {'index': '1.3', 'type': 'MaxPool2d', 'args': {'kernel_size': 3, 'stride': 2, 'padding': 0, 'dilation': 1, 'return_indices': False, 'ceil_mode': False}}]}
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5}, {'op': 'reduce_depth', 'val': 1}]
+Reduction ratio: 1.0
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 48, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(48, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (2): Sequential(
+    (0): Conv2d(128, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (4): Sequential(
+    (0): Conv2d(192, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (5): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=4608, out_features=2048, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (7): Sequential(
+    (0): Linear(in_features=2048, out_features=2048, bias=True)
+    (1): ReLU()
+  )
+  (8): Sequential(
+    (0): Linear(in_features=2048, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 48, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(48, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(192, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=4608, out_features=2048, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=2048, out_features=2048, bias=True)
+    (1): ReLU()
+  )
+  (7): Sequential(
+    (0): Linear(in_features=2048, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 1.390899, Train Acc: 49.08%, Val Loss: 1.062247, Val Acc: 61.55%
+Epoch 2/100, Train Loss: 1.027501, Train Acc: 63.20%, Val Loss: 1.001026, Val Acc: 65.35%
+Epoch 3/100, Train Loss: 0.898187, Train Acc: 67.96%, Val Loss: 0.776488, Val Acc: 73.01%
+Epoch 4/100, Train Loss: 0.812213, Train Acc: 71.43%, Val Loss: 0.740797, Val Acc: 73.92%
+Epoch 5/100, Train Loss: 0.758507, Train Acc: 73.38%, Val Loss: 0.723038, Val Acc: 74.28%
+Epoch 6/100, Train Loss: 0.711728, Train Acc: 74.97%, Val Loss: 0.656448, Val Acc: 76.97%
+Epoch 7/100, Train Loss: 0.674744, Train Acc: 76.30%, Val Loss: 0.695994, Val Acc: 75.39%
+Epoch 8/100, Train Loss: 0.636402, Train Acc: 77.45%, Val Loss: 0.605202, Val Acc: 78.87%
+Epoch 9/100, Train Loss: 0.608685, Train Acc: 78.64%, Val Loss: 0.627806, Val Acc: 78.24%
+Epoch 10/100, Train Loss: 0.585901, Train Acc: 79.34%, Val Loss: 0.582527, Val Acc: 80.17%
+Epoch 11/100, Train Loss: 0.560831, Train Acc: 80.21%, Val Loss: 0.575150, Val Acc: 79.96%
+Epoch 12/100, Train Loss: 0.540040, Train Acc: 80.90%, Val Loss: 0.532206, Val Acc: 81.70%
+Epoch 13/100, Train Loss: 0.522869, Train Acc: 81.61%, Val Loss: 0.528882, Val Acc: 82.09%
+Epoch 14/100, Train Loss: 0.504498, Train Acc: 82.25%, Val Loss: 0.538746, Val Acc: 81.42%
+Epoch 15/100, Train Loss: 0.482780, Train Acc: 83.07%, Val Loss: 0.512668, Val Acc: 82.20%
+Epoch 16/100, Train Loss: 0.469254, Train Acc: 83.57%, Val Loss: 0.550036, Val Acc: 81.11%
+Epoch 17/100, Train Loss: 0.458826, Train Acc: 84.02%, Val Loss: 0.485031, Val Acc: 83.67%
+Epoch 18/100, Train Loss: 0.439534, Train Acc: 84.48%, Val Loss: 0.478036, Val Acc: 83.23%
+Epoch 19/100, Train Loss: 0.426410, Train Acc: 85.00%, Val Loss: 0.489669, Val Acc: 83.00%
+Epoch 20/100, Train Loss: 0.416833, Train Acc: 85.30%, Val Loss: 0.476613, Val Acc: 83.59%
+Epoch 21/100, Train Loss: 0.403928, Train Acc: 85.73%, Val Loss: 0.440749, Val Acc: 84.99%
+Epoch 22/100, Train Loss: 0.391661, Train Acc: 86.32%, Val Loss: 0.470489, Val Acc: 84.10%
+Epoch 23/100, Train Loss: 0.377940, Train Acc: 86.60%, Val Loss: 0.540183, Val Acc: 81.81%
+Epoch 24/100, Train Loss: 0.367228, Train Acc: 86.98%, Val Loss: 0.456561, Val Acc: 83.99%
+Epoch 25/100, Train Loss: 0.360098, Train Acc: 87.29%, Val Loss: 0.421621, Val Acc: 85.66%
+Epoch 26/100, Train Loss: 0.349105, Train Acc: 87.73%, Val Loss: 0.463719, Val Acc: 84.22%
+Epoch 27/100, Train Loss: 0.341385, Train Acc: 87.72%, Val Loss: 0.428724, Val Acc: 85.73%
+Epoch 28/100, Train Loss: 0.335721, Train Acc: 88.00%, Val Loss: 0.439421, Val Acc: 85.17%
+Epoch 29/100, Train Loss: 0.322724, Train Acc: 88.64%, Val Loss: 0.411567, Val Acc: 86.20%
+Epoch 30/100, Train Loss: 0.313898, Train Acc: 88.82%, Val Loss: 0.411994, Val Acc: 86.01%
+Epoch 31/100, Train Loss: 0.302232, Train Acc: 89.24%, Val Loss: 0.416411, Val Acc: 86.11%
+Epoch 32/100, Train Loss: 0.295192, Train Acc: 89.58%, Val Loss: 0.401831, Val Acc: 86.33%
+Epoch 33/100, Train Loss: 0.291070, Train Acc: 89.73%, Val Loss: 0.410456, Val Acc: 86.33%
+Epoch 34/100, Train Loss: 0.280773, Train Acc: 89.85%, Val Loss: 0.404162, Val Acc: 86.82%
+Epoch 35/100, Train Loss: 0.277812, Train Acc: 90.16%, Val Loss: 0.440805, Val Acc: 85.73%
+Epoch 36/100, Train Loss: 0.272721, Train Acc: 90.28%, Val Loss: 0.432769, Val Acc: 85.83%
+Epoch 37/100, Train Loss: 0.259106, Train Acc: 90.80%, Val Loss: 0.394613, Val Acc: 86.86%
+Epoch 38/100, Train Loss: 0.253806, Train Acc: 90.86%, Val Loss: 0.402465, Val Acc: 86.81%
+Epoch 39/100, Train Loss: 0.248977, Train Acc: 91.13%, Val Loss: 0.378458, Val Acc: 87.31%
+Epoch 40/100, Train Loss: 0.239118, Train Acc: 91.51%, Val Loss: 0.384366, Val Acc: 87.42%
+Epoch 41/100, Train Loss: 0.241151, Train Acc: 91.39%, Val Loss: 0.386925, Val Acc: 87.28%
+Epoch 42/100, Train Loss: 0.229968, Train Acc: 91.84%, Val Loss: 0.423086, Val Acc: 86.02%
+Epoch 43/100, Train Loss: 0.226717, Train Acc: 91.81%, Val Loss: 0.392283, Val Acc: 87.16%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.8747}]
+Valore m[value]:  0.8747
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+Conv2d(3, 48, kernel_size=(11, 11), stride=(4, 4))
+BatchNorm aggiornato con 24 feature
+Conv2d(48, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 96 feature
+Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 96 feature
+Conv2d(192, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 64 feature
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5}]
+Reduction ratio: 0.8888888888888888
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 48, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(48, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(192, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=4608, out_features=2048, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=2048, out_features=2048, bias=True)
+    (1): ReLU()
+  )
+  (7): Sequential(
+    (0): Linear(in_features=2048, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 24, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(24, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(96, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=2304, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): ReLU()
+  )
+  (7): Sequential(
+    (0): Linear(in_features=1024, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 1.503661, Train Acc: 44.52%, Val Loss: 1.167994, Val Acc: 57.48%
+Epoch 2/100, Train Loss: 1.145361, Train Acc: 58.68%, Val Loss: 0.991831, Val Acc: 64.90%
+Epoch 3/100, Train Loss: 1.018284, Train Acc: 63.70%, Val Loss: 0.903395, Val Acc: 67.75%
+Epoch 4/100, Train Loss: 0.946353, Train Acc: 66.31%, Val Loss: 0.825450, Val Acc: 70.54%
+Epoch 5/100, Train Loss: 0.894360, Train Acc: 68.22%, Val Loss: 0.796927, Val Acc: 71.34%
+Epoch 6/100, Train Loss: 0.849456, Train Acc: 70.01%, Val Loss: 0.815301, Val Acc: 71.69%
+Epoch 7/100, Train Loss: 0.813954, Train Acc: 71.32%, Val Loss: 0.734683, Val Acc: 74.51%
+Epoch 8/100, Train Loss: 0.786571, Train Acc: 72.20%, Val Loss: 0.750168, Val Acc: 73.41%
+Epoch 9/100, Train Loss: 0.762207, Train Acc: 73.03%, Val Loss: 0.683436, Val Acc: 75.76%
+Epoch 10/100, Train Loss: 0.734147, Train Acc: 73.89%, Val Loss: 0.679016, Val Acc: 76.49%
+Epoch 11/100, Train Loss: 0.712803, Train Acc: 74.65%, Val Loss: 0.656258, Val Acc: 77.50%
+Epoch 12/100, Train Loss: 0.698543, Train Acc: 75.20%, Val Loss: 0.646948, Val Acc: 77.20%
+Epoch 13/100, Train Loss: 0.669732, Train Acc: 76.41%, Val Loss: 0.644394, Val Acc: 77.82%
+Epoch 14/100, Train Loss: 0.660521, Train Acc: 76.66%, Val Loss: 0.663543, Val Acc: 76.72%
+Epoch 15/100, Train Loss: 0.647379, Train Acc: 77.25%, Val Loss: 0.592152, Val Acc: 79.28%
+Epoch 16/100, Train Loss: 0.632109, Train Acc: 77.71%, Val Loss: 0.589084, Val Acc: 79.20%
+Epoch 17/100, Train Loss: 0.619843, Train Acc: 78.29%, Val Loss: 0.574545, Val Acc: 80.22%
+Epoch 18/100, Train Loss: 0.607136, Train Acc: 78.58%, Val Loss: 0.584065, Val Acc: 80.31%
+Epoch 19/100, Train Loss: 0.592533, Train Acc: 79.21%, Val Loss: 0.599332, Val Acc: 79.12%
+Epoch 20/100, Train Loss: 0.586588, Train Acc: 79.34%, Val Loss: 0.544600, Val Acc: 80.94%
+Epoch 21/100, Train Loss: 0.572672, Train Acc: 79.70%, Val Loss: 0.565981, Val Acc: 80.33%
+Epoch 22/100, Train Loss: 0.558696, Train Acc: 80.23%, Val Loss: 0.538992, Val Acc: 81.19%
+Epoch 23/100, Train Loss: 0.555282, Train Acc: 80.41%, Val Loss: 0.544334, Val Acc: 80.89%
+Epoch 24/100, Train Loss: 0.541958, Train Acc: 80.92%, Val Loss: 0.540856, Val Acc: 81.29%
+Epoch 25/100, Train Loss: 0.535679, Train Acc: 81.18%, Val Loss: 0.537038, Val Acc: 81.42%
+Epoch 26/100, Train Loss: 0.526308, Train Acc: 81.35%, Val Loss: 0.514103, Val Acc: 81.85%
+Epoch 27/100, Train Loss: 0.516234, Train Acc: 81.92%, Val Loss: 0.515725, Val Acc: 82.41%
+Epoch 28/100, Train Loss: 0.509759, Train Acc: 82.00%, Val Loss: 0.511157, Val Acc: 82.08%
+Epoch 29/100, Train Loss: 0.493366, Train Acc: 82.66%, Val Loss: 0.491935, Val Acc: 83.00%
+Epoch 30/100, Train Loss: 0.497998, Train Acc: 82.58%, Val Loss: 0.493306, Val Acc: 82.92%
+Epoch 31/100, Train Loss: 0.485870, Train Acc: 82.82%, Val Loss: 0.496886, Val Acc: 82.62%
+Epoch 32/100, Train Loss: 0.480536, Train Acc: 82.98%, Val Loss: 0.482548, Val Acc: 83.64%
+Epoch 33/100, Train Loss: 0.471087, Train Acc: 83.34%, Val Loss: 0.492490, Val Acc: 82.99%
+Epoch 34/100, Train Loss: 0.467649, Train Acc: 83.73%, Val Loss: 0.483057, Val Acc: 83.21%
+Epoch 35/100, Train Loss: 0.457875, Train Acc: 83.81%, Val Loss: 0.530807, Val Acc: 82.07%
+Epoch 36/100, Train Loss: 0.449894, Train Acc: 84.05%, Val Loss: 0.468911, Val Acc: 83.63%
+Epoch 37/100, Train Loss: 0.448989, Train Acc: 84.12%, Val Loss: 0.490070, Val Acc: 83.03%
+Epoch 38/100, Train Loss: 0.440220, Train Acc: 84.51%, Val Loss: 0.493992, Val Acc: 82.82%
+Epoch 39/100, Train Loss: 0.434166, Train Acc: 84.63%, Val Loss: 0.445890, Val Acc: 84.67%
+Epoch 40/100, Train Loss: 0.429602, Train Acc: 84.75%, Val Loss: 0.464408, Val Acc: 84.07%
+Epoch 41/100, Train Loss: 0.419749, Train Acc: 85.17%, Val Loss: 0.455157, Val Acc: 84.13%
+Epoch 42/100, Train Loss: 0.421099, Train Acc: 85.08%, Val Loss: 0.439727, Val Acc: 84.74%
+Epoch 43/100, Train Loss: 0.409043, Train Acc: 85.59%, Val Loss: 0.444281, Val Acc: 84.55%
+Epoch 44/100, Train Loss: 0.406877, Train Acc: 85.65%, Val Loss: 0.440014, Val Acc: 84.50%
+Epoch 45/100, Train Loss: 0.406170, Train Acc: 85.74%, Val Loss: 0.445911, Val Acc: 84.51%
+Epoch 46/100, Train Loss: 0.396716, Train Acc: 86.01%, Val Loss: 0.450106, Val Acc: 84.06%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.8471}]
+Valore m[value]:  0.8471
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+String Index to remove:  6
+DEVO RIMUOVERE:  {'index': '6', 'type': 'Sequential', 'layers': [{'index': '6.0', 'type': 'Linear', 'args': {'in_features': 1024, 'out_features': 1024}}, {'index': '6.1', 'type': 'ReLU', 'args': {'inplace': False}}]}
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 6}]
+Reduction ratio: 0.8888888888888888
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 24, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(24, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(96, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=2304, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): ReLU()
+  )
+  (7): Sequential(
+    (0): Linear(in_features=1024, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 24, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(24, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(96, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=2304, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=1024, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 1.552336, Train Acc: 43.09%, Val Loss: 1.208750, Val Acc: 55.90%
+Epoch 2/100, Train Loss: 1.193486, Train Acc: 56.74%, Val Loss: 1.035323, Val Acc: 63.49%
+Epoch 3/100, Train Loss: 1.053023, Train Acc: 62.45%, Val Loss: 0.912852, Val Acc: 68.03%
+Epoch 4/100, Train Loss: 0.973294, Train Acc: 65.39%, Val Loss: 0.834091, Val Acc: 70.88%
+Epoch 5/100, Train Loss: 0.915181, Train Acc: 67.71%, Val Loss: 0.803563, Val Acc: 72.09%
+Epoch 6/100, Train Loss: 0.862074, Train Acc: 69.70%, Val Loss: 0.754596, Val Acc: 73.60%
+Epoch 7/100, Train Loss: 0.821037, Train Acc: 71.05%, Val Loss: 0.736977, Val Acc: 74.35%
+Epoch 8/100, Train Loss: 0.791352, Train Acc: 71.96%, Val Loss: 0.748251, Val Acc: 73.43%
+Epoch 9/100, Train Loss: 0.762609, Train Acc: 73.18%, Val Loss: 0.698466, Val Acc: 75.73%
+Epoch 10/100, Train Loss: 0.738211, Train Acc: 74.16%, Val Loss: 0.681483, Val Acc: 76.31%
+Epoch 11/100, Train Loss: 0.718667, Train Acc: 74.71%, Val Loss: 0.649869, Val Acc: 77.20%
+Epoch 12/100, Train Loss: 0.694948, Train Acc: 75.68%, Val Loss: 0.642011, Val Acc: 77.99%
+Epoch 13/100, Train Loss: 0.679391, Train Acc: 76.05%, Val Loss: 0.656134, Val Acc: 76.78%
+Epoch 14/100, Train Loss: 0.664166, Train Acc: 76.69%, Val Loss: 0.634580, Val Acc: 77.92%
+Epoch 15/100, Train Loss: 0.648815, Train Acc: 77.23%, Val Loss: 0.609485, Val Acc: 78.59%
+Epoch 16/100, Train Loss: 0.632687, Train Acc: 77.82%, Val Loss: 0.622062, Val Acc: 78.50%
+Epoch 17/100, Train Loss: 0.618595, Train Acc: 78.10%, Val Loss: 0.591420, Val Acc: 79.58%
+Epoch 18/100, Train Loss: 0.605922, Train Acc: 78.81%, Val Loss: 0.570713, Val Acc: 80.16%
+Epoch 19/100, Train Loss: 0.595037, Train Acc: 79.17%, Val Loss: 0.558901, Val Acc: 80.36%
+Epoch 20/100, Train Loss: 0.586664, Train Acc: 79.58%, Val Loss: 0.583005, Val Acc: 79.52%
+Epoch 21/100, Train Loss: 0.569535, Train Acc: 80.10%, Val Loss: 0.540375, Val Acc: 81.25%
+Epoch 22/100, Train Loss: 0.560507, Train Acc: 80.39%, Val Loss: 0.540823, Val Acc: 81.21%
+Epoch 23/100, Train Loss: 0.556541, Train Acc: 80.57%, Val Loss: 0.558754, Val Acc: 80.52%
+Epoch 24/100, Train Loss: 0.541549, Train Acc: 80.97%, Val Loss: 0.536660, Val Acc: 81.26%
+Epoch 25/100, Train Loss: 0.537343, Train Acc: 81.16%, Val Loss: 0.514074, Val Acc: 81.92%
+Epoch 26/100, Train Loss: 0.526608, Train Acc: 81.45%, Val Loss: 0.551119, Val Acc: 80.79%
+Epoch 27/100, Train Loss: 0.520575, Train Acc: 81.80%, Val Loss: 0.500623, Val Acc: 82.75%
+Epoch 28/100, Train Loss: 0.510036, Train Acc: 82.27%, Val Loss: 0.503290, Val Acc: 82.00%
+Epoch 29/100, Train Loss: 0.508090, Train Acc: 82.12%, Val Loss: 0.495705, Val Acc: 82.32%
+Epoch 30/100, Train Loss: 0.495080, Train Acc: 82.69%, Val Loss: 0.511384, Val Acc: 82.12%
+Epoch 31/100, Train Loss: 0.494673, Train Acc: 82.80%, Val Loss: 0.491848, Val Acc: 83.09%
+Epoch 32/100, Train Loss: 0.482470, Train Acc: 83.14%, Val Loss: 0.495377, Val Acc: 83.02%
+Epoch 33/100, Train Loss: 0.473517, Train Acc: 83.50%, Val Loss: 0.482474, Val Acc: 83.06%
+Epoch 34/100, Train Loss: 0.469424, Train Acc: 83.54%, Val Loss: 0.478296, Val Acc: 83.47%
+Epoch 35/100, Train Loss: 0.463830, Train Acc: 83.73%, Val Loss: 0.475666, Val Acc: 83.33%
+Epoch 36/100, Train Loss: 0.459321, Train Acc: 84.10%, Val Loss: 0.508710, Val Acc: 82.37%
+Epoch 37/100, Train Loss: 0.455914, Train Acc: 84.07%, Val Loss: 0.516011, Val Acc: 82.32%
+Epoch 38/100, Train Loss: 0.451848, Train Acc: 84.10%, Val Loss: 0.457062, Val Acc: 84.03%
+Epoch 39/100, Train Loss: 0.443852, Train Acc: 84.45%, Val Loss: 0.487879, Val Acc: 82.96%
+Epoch 40/100, Train Loss: 0.436852, Train Acc: 84.63%, Val Loss: 0.452087, Val Acc: 84.29%
+Epoch 41/100, Train Loss: 0.433709, Train Acc: 84.95%, Val Loss: 0.467105, Val Acc: 83.93%
+Epoch 42/100, Train Loss: 0.428057, Train Acc: 84.95%, Val Loss: 0.446159, Val Acc: 84.65%
+Epoch 43/100, Train Loss: 0.419168, Train Acc: 85.38%, Val Loss: 0.465679, Val Acc: 84.04%
+Epoch 44/100, Train Loss: 0.418728, Train Acc: 85.42%, Val Loss: 0.453961, Val Acc: 84.43%
+Epoch 45/100, Train Loss: 0.409735, Train Acc: 85.55%, Val Loss: 0.444340, Val Acc: 84.55%
+Epoch 46/100, Train Loss: 0.407215, Train Acc: 85.75%, Val Loss: 0.441869, Val Acc: 84.78%
+Epoch 47/100, Train Loss: 0.401449, Train Acc: 85.86%, Val Loss: 0.449709, Val Acc: 84.30%
+Epoch 48/100, Train Loss: 0.399284, Train Acc: 86.11%, Val Loss: 0.446893, Val Acc: 84.71%
+Epoch 49/100, Train Loss: 0.398103, Train Acc: 86.05%, Val Loss: 0.426165, Val Acc: 85.28%
+Epoch 50/100, Train Loss: 0.391270, Train Acc: 86.13%, Val Loss: 0.451128, Val Acc: 84.41%
+Epoch 51/100, Train Loss: 0.384910, Train Acc: 86.38%, Val Loss: 0.427389, Val Acc: 85.68%
+Epoch 52/100, Train Loss: 0.381569, Train Acc: 86.64%, Val Loss: 0.442161, Val Acc: 85.25%
+Epoch 53/100, Train Loss: 0.383577, Train Acc: 86.50%, Val Loss: 0.437846, Val Acc: 84.90%
+Epoch 54/100, Train Loss: 0.378644, Train Acc: 86.69%, Val Loss: 0.424953, Val Acc: 85.00%
+Epoch 55/100, Train Loss: 0.367589, Train Acc: 86.88%, Val Loss: 0.420101, Val Acc: 85.66%
+Epoch 56/100, Train Loss: 0.370121, Train Acc: 86.97%, Val Loss: 0.421692, Val Acc: 85.93%
+Epoch 57/100, Train Loss: 0.364434, Train Acc: 87.16%, Val Loss: 0.418892, Val Acc: 85.54%
+Epoch 58/100, Train Loss: 0.361138, Train Acc: 87.18%, Val Loss: 0.422385, Val Acc: 85.73%
+Epoch 59/100, Train Loss: 0.357516, Train Acc: 87.35%, Val Loss: 0.412180, Val Acc: 85.91%
+Epoch 60/100, Train Loss: 0.352908, Train Acc: 87.54%, Val Loss: 0.408663, Val Acc: 86.36%
+Epoch 61/100, Train Loss: 0.350734, Train Acc: 87.74%, Val Loss: 0.420087, Val Acc: 85.57%
+Epoch 62/100, Train Loss: 0.344472, Train Acc: 87.96%, Val Loss: 0.414272, Val Acc: 85.92%
+Epoch 63/100, Train Loss: 0.348778, Train Acc: 87.81%, Val Loss: 0.420121, Val Acc: 85.49%
+Epoch 64/100, Train Loss: 0.340669, Train Acc: 87.98%, Val Loss: 0.443866, Val Acc: 85.32%
+Epoch 65/100, Train Loss: 0.337239, Train Acc: 88.07%, Val Loss: 0.396216, Val Acc: 86.62%
+Epoch 66/100, Train Loss: 0.330891, Train Acc: 88.33%, Val Loss: 0.416118, Val Acc: 85.76%
+Epoch 67/100, Train Loss: 0.330795, Train Acc: 88.28%, Val Loss: 0.406630, Val Acc: 86.37%
+Epoch 68/100, Train Loss: 0.332188, Train Acc: 88.23%, Val Loss: 0.407068, Val Acc: 86.20%
+Epoch 69/100, Train Loss: 0.330470, Train Acc: 88.42%, Val Loss: 0.394524, Val Acc: 86.46%
+Epoch 70/100, Train Loss: 0.318132, Train Acc: 88.74%, Val Loss: 0.392545, Val Acc: 86.89%
+Epoch 71/100, Train Loss: 0.315806, Train Acc: 88.87%, Val Loss: 0.410041, Val Acc: 86.34%
+Epoch 72/100, Train Loss: 0.319776, Train Acc: 88.67%, Val Loss: 0.407082, Val Acc: 86.27%
+Epoch 73/100, Train Loss: 0.318734, Train Acc: 88.66%, Val Loss: 0.422753, Val Acc: 86.01%
+Epoch 74/100, Train Loss: 0.314255, Train Acc: 88.86%, Val Loss: 0.410037, Val Acc: 86.17%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.8613}]
+Valore m[value]:  0.8613
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+Conv2d(3, 24, kernel_size=(11, 11), stride=(4, 4))
+BatchNorm aggiornato con 12 feature
+Conv2d(24, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 48 feature
+Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 48 feature
+Conv2d(96, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 32 feature
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 6},
+ {'op': 'scale_feats', 'val': 0.5}]
+Reduction ratio: 0.7777777777777778
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 24, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(24, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(96, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=2304, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=1024, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 12, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(12, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(48, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=1152, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 1.715470, Train Acc: 36.51%, Val Loss: 1.360274, Val Acc: 51.44%
+Epoch 2/100, Train Loss: 1.408302, Train Acc: 48.55%, Val Loss: 1.222086, Val Acc: 56.44%
+Epoch 3/100, Train Loss: 1.279201, Train Acc: 53.67%, Val Loss: 1.133344, Val Acc: 59.68%
+Epoch 4/100, Train Loss: 1.194495, Train Acc: 56.88%, Val Loss: 1.031463, Val Acc: 63.20%
+Epoch 5/100, Train Loss: 1.120479, Train Acc: 60.13%, Val Loss: 0.974223, Val Acc: 66.18%
+Epoch 6/100, Train Loss: 1.074911, Train Acc: 61.82%, Val Loss: 0.929427, Val Acc: 67.72%
+Epoch 7/100, Train Loss: 1.035335, Train Acc: 63.26%, Val Loss: 0.907196, Val Acc: 67.93%
+Epoch 8/100, Train Loss: 0.999590, Train Acc: 64.55%, Val Loss: 0.862895, Val Acc: 69.57%
+Epoch 9/100, Train Loss: 0.976833, Train Acc: 65.26%, Val Loss: 0.858671, Val Acc: 70.00%
+Epoch 10/100, Train Loss: 0.957267, Train Acc: 66.08%, Val Loss: 0.844100, Val Acc: 70.38%
+Epoch 11/100, Train Loss: 0.934474, Train Acc: 67.12%, Val Loss: 0.827223, Val Acc: 70.77%
+Epoch 12/100, Train Loss: 0.913007, Train Acc: 67.72%, Val Loss: 0.809038, Val Acc: 71.80%
+Epoch 13/100, Train Loss: 0.893463, Train Acc: 68.43%, Val Loss: 0.789206, Val Acc: 72.52%
+Epoch 14/100, Train Loss: 0.880140, Train Acc: 69.21%, Val Loss: 0.782499, Val Acc: 72.78%
+Epoch 15/100, Train Loss: 0.867956, Train Acc: 69.51%, Val Loss: 0.751962, Val Acc: 73.55%
+Epoch 16/100, Train Loss: 0.854764, Train Acc: 70.16%, Val Loss: 0.764289, Val Acc: 73.27%
+Epoch 17/100, Train Loss: 0.840920, Train Acc: 70.52%, Val Loss: 0.759536, Val Acc: 73.33%
+Epoch 18/100, Train Loss: 0.830918, Train Acc: 70.75%, Val Loss: 0.728535, Val Acc: 74.43%
+Epoch 19/100, Train Loss: 0.814722, Train Acc: 71.15%, Val Loss: 0.715612, Val Acc: 75.19%
+Epoch 20/100, Train Loss: 0.804627, Train Acc: 71.88%, Val Loss: 0.722115, Val Acc: 74.53%
+Epoch 21/100, Train Loss: 0.798523, Train Acc: 71.85%, Val Loss: 0.697270, Val Acc: 75.58%
+Epoch 22/100, Train Loss: 0.785995, Train Acc: 72.29%, Val Loss: 0.717002, Val Acc: 74.83%
+Epoch 23/100, Train Loss: 0.786664, Train Acc: 72.39%, Val Loss: 0.699804, Val Acc: 75.67%
+Epoch 24/100, Train Loss: 0.772935, Train Acc: 72.92%, Val Loss: 0.688486, Val Acc: 76.28%
+Epoch 25/100, Train Loss: 0.761990, Train Acc: 73.33%, Val Loss: 0.661866, Val Acc: 77.33%
+Epoch 26/100, Train Loss: 0.753233, Train Acc: 73.64%, Val Loss: 0.684770, Val Acc: 76.15%
+Epoch 27/100, Train Loss: 0.746847, Train Acc: 73.82%, Val Loss: 0.659260, Val Acc: 77.38%
+Epoch 28/100, Train Loss: 0.745030, Train Acc: 73.93%, Val Loss: 0.680114, Val Acc: 76.33%
+Epoch 29/100, Train Loss: 0.739339, Train Acc: 74.23%, Val Loss: 0.642503, Val Acc: 77.56%
+Epoch 30/100, Train Loss: 0.727451, Train Acc: 74.36%, Val Loss: 0.662468, Val Acc: 76.85%
+Epoch 31/100, Train Loss: 0.726365, Train Acc: 74.56%, Val Loss: 0.647809, Val Acc: 77.52%
+Epoch 32/100, Train Loss: 0.716287, Train Acc: 74.97%, Val Loss: 0.657023, Val Acc: 77.55%
+Epoch 33/100, Train Loss: 0.715611, Train Acc: 75.01%, Val Loss: 0.637977, Val Acc: 77.61%
+Epoch 34/100, Train Loss: 0.707708, Train Acc: 75.20%, Val Loss: 0.627139, Val Acc: 78.44%
+Epoch 35/100, Train Loss: 0.703899, Train Acc: 75.36%, Val Loss: 0.619793, Val Acc: 78.63%
+Epoch 36/100, Train Loss: 0.695904, Train Acc: 75.56%, Val Loss: 0.608677, Val Acc: 78.89%
+Epoch 37/100, Train Loss: 0.695479, Train Acc: 75.58%, Val Loss: 0.609713, Val Acc: 78.89%
+Epoch 38/100, Train Loss: 0.688155, Train Acc: 75.79%, Val Loss: 0.610942, Val Acc: 78.73%
+Epoch 39/100, Train Loss: 0.678160, Train Acc: 76.33%, Val Loss: 0.614621, Val Acc: 78.65%
+Epoch 40/100, Train Loss: 0.678324, Train Acc: 76.28%, Val Loss: 0.600117, Val Acc: 79.02%
+Epoch 41/100, Train Loss: 0.677402, Train Acc: 76.26%, Val Loss: 0.610951, Val Acc: 78.61%
+Epoch 42/100, Train Loss: 0.666098, Train Acc: 76.58%, Val Loss: 0.594857, Val Acc: 79.52%
+Epoch 43/100, Train Loss: 0.661746, Train Acc: 76.95%, Val Loss: 0.598879, Val Acc: 79.09%
+Epoch 44/100, Train Loss: 0.660876, Train Acc: 76.86%, Val Loss: 0.599604, Val Acc: 79.42%
+Epoch 45/100, Train Loss: 0.656111, Train Acc: 76.87%, Val Loss: 0.607368, Val Acc: 78.99%
+Epoch 46/100, Train Loss: 0.650254, Train Acc: 77.05%, Val Loss: 0.579133, Val Acc: 80.15%
+Epoch 47/100, Train Loss: 0.648056, Train Acc: 77.25%, Val Loss: 0.588314, Val Acc: 79.56%
+Epoch 48/100, Train Loss: 0.642969, Train Acc: 77.53%, Val Loss: 0.597580, Val Acc: 79.03%
+Epoch 49/100, Train Loss: 0.642390, Train Acc: 77.54%, Val Loss: 0.588274, Val Acc: 79.68%
+Epoch 50/100, Train Loss: 0.640094, Train Acc: 77.85%, Val Loss: 0.572348, Val Acc: 79.92%
+Epoch 51/100, Train Loss: 0.630555, Train Acc: 77.91%, Val Loss: 0.565473, Val Acc: 80.40%
+Epoch 52/100, Train Loss: 0.629710, Train Acc: 77.87%, Val Loss: 0.558422, Val Acc: 80.60%
+Epoch 53/100, Train Loss: 0.628621, Train Acc: 77.90%, Val Loss: 0.596127, Val Acc: 79.29%
+Epoch 54/100, Train Loss: 0.621057, Train Acc: 78.25%, Val Loss: 0.608989, Val Acc: 79.14%
+Epoch 55/100, Train Loss: 0.621665, Train Acc: 78.14%, Val Loss: 0.552761, Val Acc: 80.82%
+Epoch 56/100, Train Loss: 0.619276, Train Acc: 78.50%, Val Loss: 0.557850, Val Acc: 80.68%
+Epoch 57/100, Train Loss: 0.616994, Train Acc: 78.46%, Val Loss: 0.564874, Val Acc: 80.49%
+Epoch 58/100, Train Loss: 0.613265, Train Acc: 78.43%, Val Loss: 0.577947, Val Acc: 80.14%
+Epoch 59/100, Train Loss: 0.612054, Train Acc: 78.48%, Val Loss: 0.561154, Val Acc: 80.51%
+Epoch 60/100, Train Loss: 0.610280, Train Acc: 78.61%, Val Loss: 0.552452, Val Acc: 80.68%
+Epoch 61/100, Train Loss: 0.603014, Train Acc: 78.85%, Val Loss: 0.546458, Val Acc: 80.97%
+Epoch 62/100, Train Loss: 0.602921, Train Acc: 78.89%, Val Loss: 0.548863, Val Acc: 81.37%
+Epoch 63/100, Train Loss: 0.599553, Train Acc: 78.81%, Val Loss: 0.550292, Val Acc: 80.86%
+Epoch 64/100, Train Loss: 0.596406, Train Acc: 79.32%, Val Loss: 0.556017, Val Acc: 80.51%
+Epoch 65/100, Train Loss: 0.592043, Train Acc: 79.28%, Val Loss: 0.542713, Val Acc: 81.24%
+Epoch 66/100, Train Loss: 0.590893, Train Acc: 79.35%, Val Loss: 0.540857, Val Acc: 81.46%
+Epoch 67/100, Train Loss: 0.588741, Train Acc: 79.59%, Val Loss: 0.544469, Val Acc: 81.11%
+Epoch 68/100, Train Loss: 0.585411, Train Acc: 79.47%, Val Loss: 0.532623, Val Acc: 81.58%
+Epoch 69/100, Train Loss: 0.583301, Train Acc: 79.39%, Val Loss: 0.546030, Val Acc: 81.00%
+Epoch 70/100, Train Loss: 0.578626, Train Acc: 79.70%, Val Loss: 0.543896, Val Acc: 81.02%
+Epoch 71/100, Train Loss: 0.575468, Train Acc: 79.74%, Val Loss: 0.536046, Val Acc: 81.79%
+Epoch 72/100, Train Loss: 0.570336, Train Acc: 80.14%, Val Loss: 0.527037, Val Acc: 81.74%
+Epoch 73/100, Train Loss: 0.574401, Train Acc: 79.90%, Val Loss: 0.537369, Val Acc: 81.37%
+Epoch 74/100, Train Loss: 0.570085, Train Acc: 80.05%, Val Loss: 0.545378, Val Acc: 81.24%
+Epoch 75/100, Train Loss: 0.569241, Train Acc: 80.20%, Val Loss: 0.535108, Val Acc: 81.39%
+Epoch 76/100, Train Loss: 0.568511, Train Acc: 80.03%, Val Loss: 0.531866, Val Acc: 81.59%
+Epoch 77/100, Train Loss: 0.561693, Train Acc: 80.30%, Val Loss: 0.526095, Val Acc: 81.73%
+Epoch 78/100, Train Loss: 0.563016, Train Acc: 80.47%, Val Loss: 0.527624, Val Acc: 81.71%
+Epoch 79/100, Train Loss: 0.558905, Train Acc: 80.35%, Val Loss: 0.522661, Val Acc: 82.25%
+Epoch 80/100, Train Loss: 0.558363, Train Acc: 80.48%, Val Loss: 0.551504, Val Acc: 80.95%
+Epoch 81/100, Train Loss: 0.555373, Train Acc: 80.59%, Val Loss: 0.511532, Val Acc: 82.24%
+Epoch 82/100, Train Loss: 0.551829, Train Acc: 80.65%, Val Loss: 0.522208, Val Acc: 81.97%
+Epoch 83/100, Train Loss: 0.552726, Train Acc: 80.64%, Val Loss: 0.523390, Val Acc: 82.08%
+Epoch 84/100, Train Loss: 0.548506, Train Acc: 80.73%, Val Loss: 0.522480, Val Acc: 82.17%
+Epoch 85/100, Train Loss: 0.550901, Train Acc: 80.66%, Val Loss: 0.518435, Val Acc: 82.03%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.8232}]
+Valore m[value]:  0.8232
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+String Index to remove:  1
+DEVO RIMUOVERE:  {'index': '1', 'type': 'Sequential', 'layers': [{'index': '1.0', 'type': 'Conv2d', 'args': {'in_channels': 12, 'out_channels': 48, 'kernel_size': (3, 3), 'stride': (1, 1), 'padding': (1, 1), 'dilation': (1, 1), 'groups': 1, 'padding_mode': 'zeros'}}, {'index': '1.1', 'type': 'BatchNorm2d', 'args': {'num_features': 48, 'eps': 1e-05, 'momentum': 0.1, 'affine': True, 'track_running_stats': True}}, {'index': '1.2', 'type': 'ReLU', 'args': {'inplace': False}}]}
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 6},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1}]
+Reduction ratio: 0.7777777777777778
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 12, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(12, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (3): Sequential(
+    (0): Conv2d(48, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (4): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=1152, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (6): Sequential(
+    (0): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 12, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(12, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(48, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (3): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=1152, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 1.748718, Train Acc: 35.53%, Val Loss: 1.395114, Val Acc: 49.49%
+Epoch 2/100, Train Loss: 1.448426, Train Acc: 46.87%, Val Loss: 1.256315, Val Acc: 55.48%
+Epoch 3/100, Train Loss: 1.341296, Train Acc: 51.64%, Val Loss: 1.160870, Val Acc: 58.84%
+Epoch 4/100, Train Loss: 1.267015, Train Acc: 54.17%, Val Loss: 1.099086, Val Acc: 61.68%
+Epoch 5/100, Train Loss: 1.203987, Train Acc: 56.75%, Val Loss: 1.034100, Val Acc: 63.56%
+Epoch 6/100, Train Loss: 1.157719, Train Acc: 58.79%, Val Loss: 0.997737, Val Acc: 65.12%
+Epoch 7/100, Train Loss: 1.121738, Train Acc: 59.98%, Val Loss: 0.962722, Val Acc: 66.74%
+Epoch 8/100, Train Loss: 1.092012, Train Acc: 61.15%, Val Loss: 0.934298, Val Acc: 67.40%
+Epoch 9/100, Train Loss: 1.064035, Train Acc: 62.13%, Val Loss: 0.915096, Val Acc: 67.97%
+Epoch 10/100, Train Loss: 1.038472, Train Acc: 63.25%, Val Loss: 0.891062, Val Acc: 68.96%
+Epoch 11/100, Train Loss: 1.020637, Train Acc: 64.08%, Val Loss: 0.874141, Val Acc: 69.98%
+Epoch 12/100, Train Loss: 1.007059, Train Acc: 64.59%, Val Loss: 0.866050, Val Acc: 70.14%
+Epoch 13/100, Train Loss: 0.987727, Train Acc: 65.08%, Val Loss: 0.848871, Val Acc: 71.06%
+Epoch 14/100, Train Loss: 0.971859, Train Acc: 65.66%, Val Loss: 0.837544, Val Acc: 71.30%
+Epoch 15/100, Train Loss: 0.959662, Train Acc: 66.28%, Val Loss: 0.816845, Val Acc: 72.11%
+Epoch 16/100, Train Loss: 0.940827, Train Acc: 66.87%, Val Loss: 0.809376, Val Acc: 72.34%
+Epoch 17/100, Train Loss: 0.931813, Train Acc: 67.03%, Val Loss: 0.802674, Val Acc: 72.54%
+Epoch 18/100, Train Loss: 0.920841, Train Acc: 67.60%, Val Loss: 0.791105, Val Acc: 73.32%
+Epoch 19/100, Train Loss: 0.908943, Train Acc: 67.75%, Val Loss: 0.792430, Val Acc: 73.26%
+Epoch 20/100, Train Loss: 0.901933, Train Acc: 68.36%, Val Loss: 0.773517, Val Acc: 73.38%
+Epoch 21/100, Train Loss: 0.884216, Train Acc: 69.07%, Val Loss: 0.760086, Val Acc: 73.85%
+Epoch 22/100, Train Loss: 0.873954, Train Acc: 69.34%, Val Loss: 0.760074, Val Acc: 73.93%
+Epoch 23/100, Train Loss: 0.864751, Train Acc: 69.57%, Val Loss: 0.734152, Val Acc: 74.89%
+Epoch 24/100, Train Loss: 0.858693, Train Acc: 69.65%, Val Loss: 0.749641, Val Acc: 74.15%
+Epoch 25/100, Train Loss: 0.852727, Train Acc: 70.33%, Val Loss: 0.737220, Val Acc: 75.19%
+Epoch 26/100, Train Loss: 0.844526, Train Acc: 70.21%, Val Loss: 0.730902, Val Acc: 75.02%
+Epoch 27/100, Train Loss: 0.839018, Train Acc: 70.80%, Val Loss: 0.724676, Val Acc: 74.57%
+Epoch 28/100, Train Loss: 0.826400, Train Acc: 71.01%, Val Loss: 0.720550, Val Acc: 75.72%
+Epoch 29/100, Train Loss: 0.825416, Train Acc: 71.05%, Val Loss: 0.717452, Val Acc: 75.85%
+Epoch 30/100, Train Loss: 0.819356, Train Acc: 71.45%, Val Loss: 0.703643, Val Acc: 76.06%
+Epoch 31/100, Train Loss: 0.810240, Train Acc: 71.64%, Val Loss: 0.692883, Val Acc: 76.62%
+Epoch 32/100, Train Loss: 0.800397, Train Acc: 72.05%, Val Loss: 0.692361, Val Acc: 76.15%
+Epoch 33/100, Train Loss: 0.800804, Train Acc: 71.95%, Val Loss: 0.695408, Val Acc: 75.96%
+Epoch 34/100, Train Loss: 0.798674, Train Acc: 72.04%, Val Loss: 0.692462, Val Acc: 76.55%
+Epoch 35/100, Train Loss: 0.788815, Train Acc: 72.31%, Val Loss: 0.684869, Val Acc: 77.07%
+Epoch 36/100, Train Loss: 0.784807, Train Acc: 72.67%, Val Loss: 0.693107, Val Acc: 75.95%
+Epoch 37/100, Train Loss: 0.772142, Train Acc: 73.12%, Val Loss: 0.662898, Val Acc: 77.44%
+Epoch 38/100, Train Loss: 0.773356, Train Acc: 72.88%, Val Loss: 0.674728, Val Acc: 77.38%
+Epoch 39/100, Train Loss: 0.763820, Train Acc: 73.36%, Val Loss: 0.667247, Val Acc: 77.26%
+Epoch 40/100, Train Loss: 0.761666, Train Acc: 73.22%, Val Loss: 0.671913, Val Acc: 77.13%
+Epoch 41/100, Train Loss: 0.754875, Train Acc: 73.42%, Val Loss: 0.649226, Val Acc: 77.88%
+Epoch 42/100, Train Loss: 0.757127, Train Acc: 73.69%, Val Loss: 0.664844, Val Acc: 77.17%
+Epoch 43/100, Train Loss: 0.749090, Train Acc: 73.85%, Val Loss: 0.643451, Val Acc: 78.05%
+Epoch 44/100, Train Loss: 0.746489, Train Acc: 74.01%, Val Loss: 0.653768, Val Acc: 77.71%
+Epoch 45/100, Train Loss: 0.742626, Train Acc: 74.10%, Val Loss: 0.644116, Val Acc: 77.76%
+Epoch 46/100, Train Loss: 0.737178, Train Acc: 74.29%, Val Loss: 0.638941, Val Acc: 78.31%
+Epoch 47/100, Train Loss: 0.731119, Train Acc: 74.40%, Val Loss: 0.633807, Val Acc: 78.20%
+Epoch 48/100, Train Loss: 0.729390, Train Acc: 74.64%, Val Loss: 0.639688, Val Acc: 78.47%
+Epoch 49/100, Train Loss: 0.724698, Train Acc: 74.70%, Val Loss: 0.631383, Val Acc: 78.61%
+Epoch 50/100, Train Loss: 0.725405, Train Acc: 74.64%, Val Loss: 0.641808, Val Acc: 78.37%
+Epoch 51/100, Train Loss: 0.717912, Train Acc: 74.95%, Val Loss: 0.639065, Val Acc: 78.04%
+Epoch 52/100, Train Loss: 0.718204, Train Acc: 75.00%, Val Loss: 0.625277, Val Acc: 78.90%
+Epoch 53/100, Train Loss: 0.716125, Train Acc: 75.01%, Val Loss: 0.622155, Val Acc: 78.87%
+Epoch 54/100, Train Loss: 0.709139, Train Acc: 75.44%, Val Loss: 0.625957, Val Acc: 78.52%
+Epoch 55/100, Train Loss: 0.711273, Train Acc: 75.09%, Val Loss: 0.606483, Val Acc: 79.63%
+Epoch 56/100, Train Loss: 0.702378, Train Acc: 75.48%, Val Loss: 0.613430, Val Acc: 79.23%
+Epoch 57/100, Train Loss: 0.702151, Train Acc: 75.40%, Val Loss: 0.606059, Val Acc: 79.27%
+Epoch 58/100, Train Loss: 0.697917, Train Acc: 75.41%, Val Loss: 0.602264, Val Acc: 79.66%
+Epoch 59/100, Train Loss: 0.693100, Train Acc: 75.81%, Val Loss: 0.614299, Val Acc: 79.27%
+Epoch 60/100, Train Loss: 0.697016, Train Acc: 75.73%, Val Loss: 0.605210, Val Acc: 78.78%
+Epoch 61/100, Train Loss: 0.686905, Train Acc: 76.03%, Val Loss: 0.608133, Val Acc: 79.18%
+Epoch 62/100, Train Loss: 0.686065, Train Acc: 76.31%, Val Loss: 0.600530, Val Acc: 80.06%
+Epoch 63/100, Train Loss: 0.679235, Train Acc: 76.31%, Val Loss: 0.598972, Val Acc: 79.72%
+Epoch 64/100, Train Loss: 0.682849, Train Acc: 76.19%, Val Loss: 0.593721, Val Acc: 79.98%
+Epoch 65/100, Train Loss: 0.678590, Train Acc: 76.35%, Val Loss: 0.596264, Val Acc: 79.90%
+Epoch 66/100, Train Loss: 0.679919, Train Acc: 76.26%, Val Loss: 0.601524, Val Acc: 79.21%
+Epoch 67/100, Train Loss: 0.674227, Train Acc: 76.43%, Val Loss: 0.589377, Val Acc: 80.20%
+Epoch 68/100, Train Loss: 0.672621, Train Acc: 76.39%, Val Loss: 0.590787, Val Acc: 80.08%
+Epoch 69/100, Train Loss: 0.667106, Train Acc: 76.68%, Val Loss: 0.600995, Val Acc: 79.45%
+Epoch 70/100, Train Loss: 0.664128, Train Acc: 76.91%, Val Loss: 0.582120, Val Acc: 80.21%
+Epoch 71/100, Train Loss: 0.667284, Train Acc: 76.59%, Val Loss: 0.600703, Val Acc: 79.33%
+Epoch 72/100, Train Loss: 0.662654, Train Acc: 76.80%, Val Loss: 0.592684, Val Acc: 79.48%
+Epoch 73/100, Train Loss: 0.658917, Train Acc: 77.20%, Val Loss: 0.584896, Val Acc: 80.21%
+Epoch 74/100, Train Loss: 0.654440, Train Acc: 77.25%, Val Loss: 0.579775, Val Acc: 80.36%
+Epoch 75/100, Train Loss: 0.656583, Train Acc: 77.07%, Val Loss: 0.581035, Val Acc: 80.33%
+Epoch 76/100, Train Loss: 0.648949, Train Acc: 77.10%, Val Loss: 0.593522, Val Acc: 79.17%
+Epoch 77/100, Train Loss: 0.648050, Train Acc: 77.28%, Val Loss: 0.579840, Val Acc: 80.70%
+Epoch 78/100, Train Loss: 0.647474, Train Acc: 77.55%, Val Loss: 0.578045, Val Acc: 80.39%
+Epoch 79/100, Train Loss: 0.640297, Train Acc: 77.77%, Val Loss: 0.573800, Val Acc: 80.63%
+Epoch 80/100, Train Loss: 0.645350, Train Acc: 77.42%, Val Loss: 0.579643, Val Acc: 80.43%
+Epoch 81/100, Train Loss: 0.641400, Train Acc: 77.57%, Val Loss: 0.566753, Val Acc: 80.57%
+Epoch 82/100, Train Loss: 0.640217, Train Acc: 77.38%, Val Loss: 0.566507, Val Acc: 80.62%
+Epoch 83/100, Train Loss: 0.637682, Train Acc: 77.61%, Val Loss: 0.570295, Val Acc: 80.70%
+Epoch 84/100, Train Loss: 0.632135, Train Acc: 78.14%, Val Loss: 0.565524, Val Acc: 81.03%
+Epoch 85/100, Train Loss: 0.635372, Train Acc: 77.80%, Val Loss: 0.565910, Val Acc: 81.21%
+Epoch 86/100, Train Loss: 0.630591, Train Acc: 78.02%, Val Loss: 0.568826, Val Acc: 80.74%
+Epoch 87/100, Train Loss: 0.631079, Train Acc: 77.81%, Val Loss: 0.559783, Val Acc: 80.96%
+Epoch 88/100, Train Loss: 0.618714, Train Acc: 78.47%, Val Loss: 0.566358, Val Acc: 80.69%
+Epoch 89/100, Train Loss: 0.621853, Train Acc: 78.20%, Val Loss: 0.559725, Val Acc: 81.14%
+Epoch 90/100, Train Loss: 0.624679, Train Acc: 78.18%, Val Loss: 0.546787, Val Acc: 81.12%
+Epoch 91/100, Train Loss: 0.620619, Train Acc: 78.52%, Val Loss: 0.555589, Val Acc: 81.35%
+Epoch 92/100, Train Loss: 0.620753, Train Acc: 78.53%, Val Loss: 0.559352, Val Acc: 81.28%
+Epoch 93/100, Train Loss: 0.620606, Train Acc: 78.34%, Val Loss: 0.567271, Val Acc: 81.09%
+Epoch 94/100, Train Loss: 0.616355, Train Acc: 78.28%, Val Loss: 0.555116, Val Acc: 80.92%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.8118}]
+Valore m[value]:  0.8118
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+Conv2d(3, 12, kernel_size=(11, 11), stride=(4, 4))
+BatchNorm aggiornato con 6 feature
+Conv2d(12, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 24 feature
+Conv2d(48, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+BatchNorm aggiornato con 16 feature
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 6},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5}]
+Reduction ratio: 0.6666666666666666
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 12, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(12, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(48, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (3): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=1152, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 6, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(6, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(24, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (3): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=576, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=256, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 1.963852, Train Acc: 27.18%, Val Loss: 1.639877, Val Acc: 41.35%
+Epoch 2/100, Train Loss: 1.677674, Train Acc: 38.16%, Val Loss: 1.481247, Val Acc: 46.73%
+Epoch 3/100, Train Loss: 1.581750, Train Acc: 41.73%, Val Loss: 1.417654, Val Acc: 49.38%
+Epoch 4/100, Train Loss: 1.517738, Train Acc: 44.65%, Val Loss: 1.347387, Val Acc: 52.41%
+Epoch 5/100, Train Loss: 1.475994, Train Acc: 46.31%, Val Loss: 1.314400, Val Acc: 53.39%
+Epoch 6/100, Train Loss: 1.435464, Train Acc: 48.33%, Val Loss: 1.298137, Val Acc: 53.96%
+Epoch 7/100, Train Loss: 1.415772, Train Acc: 48.74%, Val Loss: 1.255542, Val Acc: 55.87%
+Epoch 8/100, Train Loss: 1.386512, Train Acc: 50.20%, Val Loss: 1.231312, Val Acc: 57.03%
+Epoch 9/100, Train Loss: 1.367450, Train Acc: 51.03%, Val Loss: 1.203809, Val Acc: 58.13%
+Epoch 10/100, Train Loss: 1.350660, Train Acc: 52.01%, Val Loss: 1.188522, Val Acc: 58.35%
+Epoch 11/100, Train Loss: 1.328509, Train Acc: 52.31%, Val Loss: 1.170472, Val Acc: 58.99%
+Epoch 12/100, Train Loss: 1.310613, Train Acc: 53.19%, Val Loss: 1.167649, Val Acc: 59.45%
+Epoch 13/100, Train Loss: 1.302008, Train Acc: 53.40%, Val Loss: 1.150448, Val Acc: 60.15%
+Epoch 14/100, Train Loss: 1.289803, Train Acc: 53.91%, Val Loss: 1.132885, Val Acc: 60.46%
+Epoch 15/100, Train Loss: 1.273688, Train Acc: 54.43%, Val Loss: 1.111430, Val Acc: 61.27%
+Epoch 16/100, Train Loss: 1.261969, Train Acc: 54.69%, Val Loss: 1.104366, Val Acc: 61.15%
+Epoch 17/100, Train Loss: 1.252640, Train Acc: 55.45%, Val Loss: 1.087107, Val Acc: 62.63%
+Epoch 18/100, Train Loss: 1.235480, Train Acc: 56.04%, Val Loss: 1.083299, Val Acc: 62.67%
+Epoch 19/100, Train Loss: 1.228525, Train Acc: 56.42%, Val Loss: 1.068823, Val Acc: 62.83%
+Epoch 20/100, Train Loss: 1.217708, Train Acc: 56.79%, Val Loss: 1.069636, Val Acc: 62.62%
+Epoch 21/100, Train Loss: 1.207515, Train Acc: 57.22%, Val Loss: 1.056038, Val Acc: 63.34%
+Epoch 22/100, Train Loss: 1.201366, Train Acc: 57.23%, Val Loss: 1.039112, Val Acc: 64.25%
+Epoch 23/100, Train Loss: 1.196809, Train Acc: 57.41%, Val Loss: 1.028688, Val Acc: 64.65%
+Epoch 24/100, Train Loss: 1.183570, Train Acc: 57.86%, Val Loss: 1.018446, Val Acc: 65.15%
+Epoch 25/100, Train Loss: 1.176883, Train Acc: 58.29%, Val Loss: 1.023411, Val Acc: 64.49%
+Epoch 26/100, Train Loss: 1.166725, Train Acc: 58.55%, Val Loss: 1.005660, Val Acc: 65.40%
+Epoch 27/100, Train Loss: 1.162434, Train Acc: 58.67%, Val Loss: 1.001035, Val Acc: 65.93%
+Epoch 28/100, Train Loss: 1.150584, Train Acc: 59.18%, Val Loss: 0.991555, Val Acc: 66.25%
+Epoch 29/100, Train Loss: 1.147417, Train Acc: 59.42%, Val Loss: 0.976296, Val Acc: 66.85%
+Epoch 30/100, Train Loss: 1.145545, Train Acc: 59.51%, Val Loss: 0.982387, Val Acc: 66.52%
+Epoch 31/100, Train Loss: 1.129529, Train Acc: 60.05%, Val Loss: 0.968131, Val Acc: 66.83%
+Epoch 32/100, Train Loss: 1.128217, Train Acc: 60.02%, Val Loss: 0.961229, Val Acc: 67.10%
+Epoch 33/100, Train Loss: 1.115859, Train Acc: 60.75%, Val Loss: 0.966161, Val Acc: 66.59%
+Epoch 34/100, Train Loss: 1.115985, Train Acc: 60.71%, Val Loss: 0.950273, Val Acc: 67.51%
+Epoch 35/100, Train Loss: 1.108165, Train Acc: 60.84%, Val Loss: 0.956191, Val Acc: 67.37%
+Epoch 36/100, Train Loss: 1.103873, Train Acc: 61.03%, Val Loss: 0.939661, Val Acc: 67.81%
+Epoch 37/100, Train Loss: 1.098420, Train Acc: 61.45%, Val Loss: 0.941049, Val Acc: 68.01%
+Epoch 38/100, Train Loss: 1.097990, Train Acc: 61.19%, Val Loss: 0.946618, Val Acc: 67.99%
+Epoch 39/100, Train Loss: 1.089127, Train Acc: 61.57%, Val Loss: 0.932009, Val Acc: 68.36%
+Epoch 40/100, Train Loss: 1.085288, Train Acc: 61.89%, Val Loss: 0.923290, Val Acc: 68.56%
+Epoch 41/100, Train Loss: 1.077394, Train Acc: 61.95%, Val Loss: 0.923743, Val Acc: 68.65%
+Epoch 42/100, Train Loss: 1.077338, Train Acc: 61.92%, Val Loss: 0.920374, Val Acc: 68.87%
+Epoch 43/100, Train Loss: 1.074228, Train Acc: 62.34%, Val Loss: 0.918011, Val Acc: 68.98%
+Epoch 44/100, Train Loss: 1.070454, Train Acc: 62.34%, Val Loss: 0.906832, Val Acc: 69.29%
+Epoch 45/100, Train Loss: 1.065501, Train Acc: 62.34%, Val Loss: 0.904131, Val Acc: 69.47%
+Epoch 46/100, Train Loss: 1.060319, Train Acc: 62.41%, Val Loss: 0.905677, Val Acc: 69.03%
+Epoch 47/100, Train Loss: 1.064233, Train Acc: 62.73%, Val Loss: 0.902464, Val Acc: 69.66%
+Epoch 48/100, Train Loss: 1.057897, Train Acc: 62.85%, Val Loss: 0.900201, Val Acc: 69.48%
+Epoch 49/100, Train Loss: 1.044596, Train Acc: 63.24%, Val Loss: 0.895954, Val Acc: 69.91%
+Epoch 50/100, Train Loss: 1.050296, Train Acc: 63.06%, Val Loss: 0.892985, Val Acc: 69.84%
+Epoch 51/100, Train Loss: 1.043558, Train Acc: 63.26%, Val Loss: 0.880568, Val Acc: 70.13%
+Epoch 52/100, Train Loss: 1.034848, Train Acc: 63.45%, Val Loss: 0.890430, Val Acc: 69.91%
+Epoch 53/100, Train Loss: 1.033217, Train Acc: 63.51%, Val Loss: 0.877225, Val Acc: 70.27%
+Epoch 54/100, Train Loss: 1.029961, Train Acc: 63.93%, Val Loss: 0.883051, Val Acc: 70.15%
+Epoch 55/100, Train Loss: 1.028602, Train Acc: 63.80%, Val Loss: 0.867906, Val Acc: 70.66%
+Epoch 56/100, Train Loss: 1.025227, Train Acc: 63.85%, Val Loss: 0.875546, Val Acc: 70.36%
+Epoch 57/100, Train Loss: 1.017034, Train Acc: 64.37%, Val Loss: 0.882846, Val Acc: 70.13%
+Epoch 58/100, Train Loss: 1.021875, Train Acc: 63.97%, Val Loss: 0.865216, Val Acc: 70.41%
+Epoch 59/100, Train Loss: 1.020912, Train Acc: 64.18%, Val Loss: 0.866714, Val Acc: 70.66%
+Epoch 60/100, Train Loss: 1.012718, Train Acc: 64.15%, Val Loss: 0.871793, Val Acc: 70.19%
+Epoch 61/100, Train Loss: 1.012677, Train Acc: 64.41%, Val Loss: 0.868294, Val Acc: 70.64%
+Epoch 62/100, Train Loss: 1.012415, Train Acc: 64.56%, Val Loss: 0.854356, Val Acc: 71.13%
+Epoch 63/100, Train Loss: 1.010238, Train Acc: 64.83%, Val Loss: 0.864199, Val Acc: 70.37%
+Epoch 64/100, Train Loss: 1.002953, Train Acc: 64.68%, Val Loss: 0.860472, Val Acc: 71.05%
+Epoch 65/100, Train Loss: 1.000646, Train Acc: 64.78%, Val Loss: 0.851073, Val Acc: 71.53%
+Epoch 66/100, Train Loss: 1.000153, Train Acc: 64.92%, Val Loss: 0.845218, Val Acc: 71.42%
+Epoch 67/100, Train Loss: 0.998504, Train Acc: 64.97%, Val Loss: 0.851772, Val Acc: 71.09%
+Epoch 68/100, Train Loss: 0.994143, Train Acc: 65.16%, Val Loss: 0.851828, Val Acc: 71.59%
+Epoch 69/100, Train Loss: 0.995547, Train Acc: 65.28%, Val Loss: 0.841169, Val Acc: 71.87%
+Epoch 70/100, Train Loss: 0.991706, Train Acc: 65.03%, Val Loss: 0.837544, Val Acc: 71.96%
+Epoch 71/100, Train Loss: 0.989238, Train Acc: 65.22%, Val Loss: 0.831660, Val Acc: 72.10%
+Epoch 72/100, Train Loss: 0.983267, Train Acc: 65.27%, Val Loss: 0.843075, Val Acc: 71.64%
+Epoch 73/100, Train Loss: 0.985298, Train Acc: 65.27%, Val Loss: 0.833371, Val Acc: 71.83%
+Epoch 74/100, Train Loss: 0.979556, Train Acc: 65.47%, Val Loss: 0.835137, Val Acc: 71.92%
+Epoch 75/100, Train Loss: 0.982230, Train Acc: 65.68%, Val Loss: 0.825399, Val Acc: 72.40%
+Epoch 76/100, Train Loss: 0.980925, Train Acc: 65.53%, Val Loss: 0.834022, Val Acc: 72.02%
+Epoch 77/100, Train Loss: 0.978228, Train Acc: 65.63%, Val Loss: 0.827606, Val Acc: 72.47%
+Epoch 78/100, Train Loss: 0.971672, Train Acc: 65.87%, Val Loss: 0.819463, Val Acc: 72.45%
+Epoch 79/100, Train Loss: 0.974933, Train Acc: 65.98%, Val Loss: 0.835755, Val Acc: 71.59%
+Epoch 80/100, Train Loss: 0.973136, Train Acc: 65.81%, Val Loss: 0.824149, Val Acc: 72.49%
+Epoch 81/100, Train Loss: 0.968116, Train Acc: 65.96%, Val Loss: 0.818616, Val Acc: 72.32%
+Epoch 82/100, Train Loss: 0.971099, Train Acc: 65.95%, Val Loss: 0.818397, Val Acc: 72.83%
+Epoch 83/100, Train Loss: 0.966624, Train Acc: 66.19%, Val Loss: 0.820023, Val Acc: 72.78%
+Epoch 84/100, Train Loss: 0.961635, Train Acc: 66.56%, Val Loss: 0.807776, Val Acc: 72.93%
+Epoch 85/100, Train Loss: 0.960425, Train Acc: 66.35%, Val Loss: 0.811442, Val Acc: 73.14%
+Epoch 86/100, Train Loss: 0.960262, Train Acc: 66.40%, Val Loss: 0.805208, Val Acc: 73.21%
+Epoch 87/100, Train Loss: 0.951137, Train Acc: 66.63%, Val Loss: 0.811351, Val Acc: 72.67%
+Epoch 88/100, Train Loss: 0.959937, Train Acc: 66.34%, Val Loss: 0.804249, Val Acc: 73.27%
+Epoch 89/100, Train Loss: 0.957086, Train Acc: 66.57%, Val Loss: 0.809732, Val Acc: 73.03%
+Epoch 90/100, Train Loss: 0.956896, Train Acc: 66.37%, Val Loss: 0.801579, Val Acc: 73.52%
+Epoch 91/100, Train Loss: 0.954030, Train Acc: 66.51%, Val Loss: 0.800719, Val Acc: 73.18%
+Epoch 92/100, Train Loss: 0.947577, Train Acc: 66.72%, Val Loss: 0.799327, Val Acc: 73.41%
+Epoch 93/100, Train Loss: 0.948675, Train Acc: 66.80%, Val Loss: 0.801084, Val Acc: 73.58%
+Epoch 94/100, Train Loss: 0.949014, Train Acc: 66.76%, Val Loss: 0.799845, Val Acc: 73.38%
+Epoch 95/100, Train Loss: 0.948097, Train Acc: 66.55%, Val Loss: 0.804088, Val Acc: 72.80%
+Epoch 96/100, Train Loss: 0.945616, Train Acc: 66.94%, Val Loss: 0.799938, Val Acc: 73.40%
+Epoch 97/100, Train Loss: 0.946421, Train Acc: 67.02%, Val Loss: 0.791487, Val Acc: 73.75%
+Epoch 98/100, Train Loss: 0.939635, Train Acc: 67.19%, Val Loss: 0.793818, Val Acc: 73.67%
+Epoch 99/100, Train Loss: 0.936443, Train Acc: 67.28%, Val Loss: 0.793082, Val Acc: 73.87%
+Epoch 100/100, Train Loss: 0.938512, Train Acc: 67.21%, Val Loss: 0.791643, Val Acc: 73.62%
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7362}]
+Valore m[value]:  0.7362
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7362
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.938174, Train Acc: 67.01%, Val Loss: 0.788314, Val Acc: 73.71%
+Epoch 2/100, Train Loss: 0.934052, Train Acc: 67.23%, Val Loss: 0.781501, Val Acc: 74.13%
+Epoch 3/100, Train Loss: 0.933152, Train Acc: 67.37%, Val Loss: 0.784043, Val Acc: 74.07%
+Epoch 4/100, Train Loss: 0.937080, Train Acc: 67.15%, Val Loss: 0.779449, Val Acc: 74.34%
+Epoch 5/100, Train Loss: 0.931555, Train Acc: 67.45%, Val Loss: 0.780904, Val Acc: 74.12%
+Epoch 6/100, Train Loss: 0.924430, Train Acc: 67.47%, Val Loss: 0.787494, Val Acc: 74.04%
+Epoch 7/100, Train Loss: 0.931186, Train Acc: 67.43%, Val Loss: 0.782405, Val Acc: 74.10%
+Epoch 8/100, Train Loss: 0.931412, Train Acc: 67.34%, Val Loss: 0.785102, Val Acc: 74.46%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7409}]
+Valore m[value]:  0.7409
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7409
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.927547, Train Acc: 67.52%, Val Loss: 0.795901, Val Acc: 73.49%
+Epoch 2/100, Train Loss: 0.927106, Train Acc: 67.69%, Val Loss: 0.787057, Val Acc: 74.34%
+Epoch 3/100, Train Loss: 0.917783, Train Acc: 67.79%, Val Loss: 0.773915, Val Acc: 73.84%
+Epoch 4/100, Train Loss: 0.915362, Train Acc: 67.92%, Val Loss: 0.771727, Val Acc: 74.69%
+Epoch 5/100, Train Loss: 0.917561, Train Acc: 67.74%, Val Loss: 0.779514, Val Acc: 74.39%
+Epoch 6/100, Train Loss: 0.920282, Train Acc: 68.03%, Val Loss: 0.780559, Val Acc: 73.82%
+Epoch 7/100, Train Loss: 0.923087, Train Acc: 67.88%, Val Loss: 0.770770, Val Acc: 74.90%
+Epoch 8/100, Train Loss: 0.917914, Train Acc: 67.79%, Val Loss: 0.772578, Val Acc: 74.53%
+Epoch 9/100, Train Loss: 0.912965, Train Acc: 68.23%, Val Loss: 0.771935, Val Acc: 74.77%
+Epoch 10/100, Train Loss: 0.914206, Train Acc: 68.16%, Val Loss: 0.767622, Val Acc: 74.35%
+Epoch 11/100, Train Loss: 0.911037, Train Acc: 68.00%, Val Loss: 0.771127, Val Acc: 74.48%
+Epoch 12/100, Train Loss: 0.912301, Train Acc: 68.20%, Val Loss: 0.770687, Val Acc: 74.42%
+Epoch 13/100, Train Loss: 0.910345, Train Acc: 68.23%, Val Loss: 0.758974, Val Acc: 74.69%
+Epoch 14/100, Train Loss: 0.908539, Train Acc: 68.08%, Val Loss: 0.790959, Val Acc: 73.58%
+Epoch 15/100, Train Loss: 0.903004, Train Acc: 68.30%, Val Loss: 0.787933, Val Acc: 74.13%
+Epoch 16/100, Train Loss: 0.905069, Train Acc: 68.54%, Val Loss: 0.770672, Val Acc: 74.25%
+Epoch 17/100, Train Loss: 0.904844, Train Acc: 68.32%, Val Loss: 0.757351, Val Acc: 75.32%
+Epoch 18/100, Train Loss: 0.904167, Train Acc: 68.55%, Val Loss: 0.763702, Val Acc: 74.85%
+Epoch 19/100, Train Loss: 0.910540, Train Acc: 68.40%, Val Loss: 0.761906, Val Acc: 74.70%
+Epoch 20/100, Train Loss: 0.900319, Train Acc: 68.54%, Val Loss: 0.764156, Val Acc: 74.72%
+Epoch 21/100, Train Loss: 0.901610, Train Acc: 68.47%, Val Loss: 0.757003, Val Acc: 74.80%
+Epoch 22/100, Train Loss: 0.896946, Train Acc: 68.59%, Val Loss: 0.759888, Val Acc: 74.91%
+Epoch 23/100, Train Loss: 0.900646, Train Acc: 68.52%, Val Loss: 0.761747, Val Acc: 74.49%
+Epoch 24/100, Train Loss: 0.900229, Train Acc: 68.63%, Val Loss: 0.765519, Val Acc: 74.11%
+Epoch 25/100, Train Loss: 0.900785, Train Acc: 68.48%, Val Loss: 0.757298, Val Acc: 74.90%
+Epoch 26/100, Train Loss: 0.896397, Train Acc: 68.73%, Val Loss: 0.752813, Val Acc: 74.95%
+Epoch 27/100, Train Loss: 0.895983, Train Acc: 68.55%, Val Loss: 0.773338, Val Acc: 74.22%
+Epoch 28/100, Train Loss: 0.893172, Train Acc: 68.73%, Val Loss: 0.750604, Val Acc: 74.98%
+Epoch 29/100, Train Loss: 0.896949, Train Acc: 68.83%, Val Loss: 0.747694, Val Acc: 75.19%
+Epoch 30/100, Train Loss: 0.889903, Train Acc: 68.80%, Val Loss: 0.743377, Val Acc: 75.58%
+Epoch 31/100, Train Loss: 0.894887, Train Acc: 68.76%, Val Loss: 0.752545, Val Acc: 74.87%
+Epoch 32/100, Train Loss: 0.889838, Train Acc: 68.90%, Val Loss: 0.749914, Val Acc: 75.36%
+Epoch 33/100, Train Loss: 0.892864, Train Acc: 68.73%, Val Loss: 0.748078, Val Acc: 75.25%
+Epoch 34/100, Train Loss: 0.892012, Train Acc: 68.78%, Val Loss: 0.752814, Val Acc: 75.11%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7502}]
+Valore m[value]:  0.7502
+	Requirements satisfied! Reducing model ... 
+Saving mid model... 
+String Index to remove:  4
+DEVO RIMUOVERE:  {'index': '4', 'type': 'Sequential', 'layers': [{'index': '4.0', 'type': 'Linear', 'args': {'in_features': 576, 'out_features': 256}}, {'index': '4.1', 'type': 'ReLU', 'args': {'inplace': False}}, {'index': '4.2', 'type': 'Dropout', 'args': {'p': 0.5, 'inplace': False}}]}
+Reduction operations:
+[{'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 6},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 1},
+ {'op': 'scale_feats', 'val': 0.5},
+ {'op': 'reduce_depth', 'val': 4}]
+Reduction ratio: 0.6666666666666666
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 6, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(6, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(24, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (3): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=576, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=256, out_features=10, bias=True)
+  )
+)
+------------------------------------------------------------------------------
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 6, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(6, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(24, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (3): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=576, out_features=10, bias=True)
+  )
+)
+Epoch 1/100, Train Loss: 2.056808, Train Acc: 23.78%, Val Loss: 1.734373, Val Acc: 39.03%
+Epoch 2/100, Train Loss: 1.736473, Train Acc: 35.82%, Val Loss: 1.523944, Val Acc: 46.56%
+Epoch 3/100, Train Loss: 1.582687, Train Acc: 41.94%, Val Loss: 1.425839, Val Acc: 50.13%
+Epoch 4/100, Train Loss: 1.502956, Train Acc: 45.13%, Val Loss: 1.355848, Val Acc: 52.00%
+Epoch 5/100, Train Loss: 1.441535, Train Acc: 47.70%, Val Loss: 1.317052, Val Acc: 53.87%
+Epoch 6/100, Train Loss: 1.402636, Train Acc: 49.43%, Val Loss: 1.280993, Val Acc: 55.22%
+Epoch 7/100, Train Loss: 1.371412, Train Acc: 50.69%, Val Loss: 1.251563, Val Acc: 55.82%
+Epoch 8/100, Train Loss: 1.347806, Train Acc: 51.51%, Val Loss: 1.236631, Val Acc: 56.76%
+Epoch 9/100, Train Loss: 1.326916, Train Acc: 52.49%, Val Loss: 1.215429, Val Acc: 57.33%
+Epoch 10/100, Train Loss: 1.311225, Train Acc: 53.12%, Val Loss: 1.194734, Val Acc: 57.96%
+Epoch 11/100, Train Loss: 1.294892, Train Acc: 53.84%, Val Loss: 1.185317, Val Acc: 58.45%
+Epoch 12/100, Train Loss: 1.280565, Train Acc: 54.27%, Val Loss: 1.169621, Val Acc: 59.14%
+Epoch 13/100, Train Loss: 1.269068, Train Acc: 54.77%, Val Loss: 1.152999, Val Acc: 59.75%
+Epoch 14/100, Train Loss: 1.260168, Train Acc: 55.07%, Val Loss: 1.141834, Val Acc: 60.18%
+Epoch 15/100, Train Loss: 1.248514, Train Acc: 55.55%, Val Loss: 1.141287, Val Acc: 60.27%
+Epoch 16/100, Train Loss: 1.242119, Train Acc: 55.77%, Val Loss: 1.138595, Val Acc: 60.37%
+Epoch 17/100, Train Loss: 1.229304, Train Acc: 56.34%, Val Loss: 1.122777, Val Acc: 61.20%
+Epoch 18/100, Train Loss: 1.222407, Train Acc: 56.57%, Val Loss: 1.106764, Val Acc: 61.04%
+Epoch 19/100, Train Loss: 1.214687, Train Acc: 56.90%, Val Loss: 1.106282, Val Acc: 61.51%
+Epoch 20/100, Train Loss: 1.209183, Train Acc: 57.02%, Val Loss: 1.090078, Val Acc: 62.16%
+Epoch 21/100, Train Loss: 1.201069, Train Acc: 57.32%, Val Loss: 1.076752, Val Acc: 62.71%
+Epoch 22/100, Train Loss: 1.190050, Train Acc: 57.96%, Val Loss: 1.075266, Val Acc: 62.45%
+Epoch 23/100, Train Loss: 1.193396, Train Acc: 57.91%, Val Loss: 1.089556, Val Acc: 61.79%
+Epoch 24/100, Train Loss: 1.186671, Train Acc: 58.04%, Val Loss: 1.062145, Val Acc: 63.32%
+Epoch 25/100, Train Loss: 1.172747, Train Acc: 58.46%, Val Loss: 1.057056, Val Acc: 63.21%
+Epoch 26/100, Train Loss: 1.162757, Train Acc: 58.68%, Val Loss: 1.048246, Val Acc: 63.63%
+Epoch 27/100, Train Loss: 1.163563, Train Acc: 59.04%, Val Loss: 1.046413, Val Acc: 63.79%
+Epoch 28/100, Train Loss: 1.155984, Train Acc: 59.13%, Val Loss: 1.036747, Val Acc: 63.95%
+Epoch 29/100, Train Loss: 1.152911, Train Acc: 59.17%, Val Loss: 1.031573, Val Acc: 64.03%
+Epoch 30/100, Train Loss: 1.147251, Train Acc: 59.30%, Val Loss: 1.026601, Val Acc: 64.13%
+Epoch 31/100, Train Loss: 1.141178, Train Acc: 59.59%, Val Loss: 1.025329, Val Acc: 64.66%
+Epoch 32/100, Train Loss: 1.138042, Train Acc: 60.12%, Val Loss: 1.011876, Val Acc: 64.84%
+Epoch 33/100, Train Loss: 1.135862, Train Acc: 59.89%, Val Loss: 1.005750, Val Acc: 64.93%
+Epoch 34/100, Train Loss: 1.133776, Train Acc: 60.13%, Val Loss: 1.001690, Val Acc: 65.31%
+Epoch 35/100, Train Loss: 1.128221, Train Acc: 60.50%, Val Loss: 0.998661, Val Acc: 65.39%
+Epoch 36/100, Train Loss: 1.119670, Train Acc: 60.53%, Val Loss: 0.997239, Val Acc: 65.45%
+Epoch 37/100, Train Loss: 1.122316, Train Acc: 60.52%, Val Loss: 0.996424, Val Acc: 65.64%
+Epoch 38/100, Train Loss: 1.111382, Train Acc: 60.73%, Val Loss: 0.989728, Val Acc: 65.69%
+Epoch 39/100, Train Loss: 1.112982, Train Acc: 60.94%, Val Loss: 0.989552, Val Acc: 65.67%
+Epoch 40/100, Train Loss: 1.111212, Train Acc: 60.99%, Val Loss: 1.008743, Val Acc: 64.65%
+Epoch 41/100, Train Loss: 1.106551, Train Acc: 61.07%, Val Loss: 0.983353, Val Acc: 65.93%
+Epoch 42/100, Train Loss: 1.105955, Train Acc: 61.22%, Val Loss: 0.985472, Val Acc: 65.84%
+Epoch 43/100, Train Loss: 1.103795, Train Acc: 61.18%, Val Loss: 0.979604, Val Acc: 65.98%
+Epoch 44/100, Train Loss: 1.096274, Train Acc: 61.51%, Val Loss: 0.976013, Val Acc: 66.18%
+Epoch 45/100, Train Loss: 1.095071, Train Acc: 61.73%, Val Loss: 0.973773, Val Acc: 66.63%
+Epoch 46/100, Train Loss: 1.091815, Train Acc: 61.51%, Val Loss: 0.967957, Val Acc: 66.55%
+Epoch 47/100, Train Loss: 1.087388, Train Acc: 61.80%, Val Loss: 0.970065, Val Acc: 66.41%
+Epoch 48/100, Train Loss: 1.085917, Train Acc: 62.08%, Val Loss: 0.972297, Val Acc: 66.08%
+Epoch 49/100, Train Loss: 1.085070, Train Acc: 61.78%, Val Loss: 0.981089, Val Acc: 66.20%
+Epoch 50/100, Train Loss: 1.084262, Train Acc: 61.77%, Val Loss: 0.958701, Val Acc: 67.08%
+Epoch 51/100, Train Loss: 1.081006, Train Acc: 62.12%, Val Loss: 0.970386, Val Acc: 66.10%
+Epoch 52/100, Train Loss: 1.079098, Train Acc: 62.17%, Val Loss: 0.954197, Val Acc: 67.17%
+Epoch 53/100, Train Loss: 1.073848, Train Acc: 62.52%, Val Loss: 0.951217, Val Acc: 66.97%
+Epoch 54/100, Train Loss: 1.073615, Train Acc: 62.12%, Val Loss: 0.958829, Val Acc: 67.20%
+Epoch 55/100, Train Loss: 1.077963, Train Acc: 62.25%, Val Loss: 0.948200, Val Acc: 67.02%
+Epoch 56/100, Train Loss: 1.071629, Train Acc: 62.45%, Val Loss: 0.944279, Val Acc: 67.35%
+Epoch 57/100, Train Loss: 1.065781, Train Acc: 62.57%, Val Loss: 0.945430, Val Acc: 67.66%
+Epoch 58/100, Train Loss: 1.068249, Train Acc: 62.49%, Val Loss: 0.944003, Val Acc: 67.49%
+Epoch 59/100, Train Loss: 1.061662, Train Acc: 63.07%, Val Loss: 0.944883, Val Acc: 67.29%
+Epoch 60/100, Train Loss: 1.063526, Train Acc: 62.84%, Val Loss: 0.941195, Val Acc: 67.37%
+Epoch 61/100, Train Loss: 1.064623, Train Acc: 62.94%, Val Loss: 0.942299, Val Acc: 67.51%
+Epoch 62/100, Train Loss: 1.059345, Train Acc: 63.07%, Val Loss: 0.933670, Val Acc: 68.18%
+Epoch 63/100, Train Loss: 1.054559, Train Acc: 63.28%, Val Loss: 0.958723, Val Acc: 67.27%
+Epoch 64/100, Train Loss: 1.053716, Train Acc: 63.24%, Val Loss: 0.939772, Val Acc: 67.62%
+Epoch 65/100, Train Loss: 1.056077, Train Acc: 63.08%, Val Loss: 0.957815, Val Acc: 66.42%
+Epoch 66/100, Train Loss: 1.051955, Train Acc: 63.10%, Val Loss: 0.939125, Val Acc: 67.80%
+Epoch 67/100, Train Loss: 1.052111, Train Acc: 63.42%, Val Loss: 0.926292, Val Acc: 68.33%
+Epoch 68/100, Train Loss: 1.043949, Train Acc: 63.29%, Val Loss: 0.924912, Val Acc: 68.32%
+Epoch 69/100, Train Loss: 1.045842, Train Acc: 63.38%, Val Loss: 0.932725, Val Acc: 67.54%
+Epoch 70/100, Train Loss: 1.049176, Train Acc: 63.36%, Val Loss: 0.931519, Val Acc: 67.97%
+Epoch 71/100, Train Loss: 1.041782, Train Acc: 63.60%, Val Loss: 0.920566, Val Acc: 68.42%
+Epoch 72/100, Train Loss: 1.043337, Train Acc: 63.44%, Val Loss: 0.919791, Val Acc: 68.49%
+Epoch 73/100, Train Loss: 1.038588, Train Acc: 63.55%, Val Loss: 0.919095, Val Acc: 68.37%
+Epoch 74/100, Train Loss: 1.040493, Train Acc: 63.70%, Val Loss: 0.920595, Val Acc: 68.53%
+Epoch 75/100, Train Loss: 1.036471, Train Acc: 63.63%, Val Loss: 0.926759, Val Acc: 67.78%
+Epoch 76/100, Train Loss: 1.033802, Train Acc: 63.84%, Val Loss: 0.916229, Val Acc: 68.74%
+Epoch 77/100, Train Loss: 1.029412, Train Acc: 64.06%, Val Loss: 0.916367, Val Acc: 68.45%
+Epoch 78/100, Train Loss: 1.032546, Train Acc: 63.91%, Val Loss: 0.910342, Val Acc: 69.05%
+Epoch 79/100, Train Loss: 1.029911, Train Acc: 64.03%, Val Loss: 0.911729, Val Acc: 68.83%
+Epoch 80/100, Train Loss: 1.026331, Train Acc: 64.18%, Val Loss: 0.920098, Val Acc: 68.90%
+Epoch 81/100, Train Loss: 1.028803, Train Acc: 64.00%, Val Loss: 0.914451, Val Acc: 69.12%
+Epoch 82/100, Train Loss: 1.022020, Train Acc: 64.31%, Val Loss: 0.909980, Val Acc: 68.77%
+Epoch 83/100, Train Loss: 1.026695, Train Acc: 63.99%, Val Loss: 0.907580, Val Acc: 68.80%
+Epoch 84/100, Train Loss: 1.025605, Train Acc: 64.05%, Val Loss: 0.905016, Val Acc: 69.26%
+Epoch 85/100, Train Loss: 1.024221, Train Acc: 64.30%, Val Loss: 0.913759, Val Acc: 68.79%
+Epoch 86/100, Train Loss: 1.021859, Train Acc: 64.26%, Val Loss: 0.929607, Val Acc: 67.64%
+Epoch 87/100, Train Loss: 1.021542, Train Acc: 64.31%, Val Loss: 0.903875, Val Acc: 69.08%
+Epoch 88/100, Train Loss: 1.018722, Train Acc: 64.39%, Val Loss: 0.906465, Val Acc: 68.86%
+Epoch 89/100, Train Loss: 1.020856, Train Acc: 64.56%, Val Loss: 0.904799, Val Acc: 68.94%
+Epoch 90/100, Train Loss: 1.013149, Train Acc: 64.73%, Val Loss: 0.897406, Val Acc: 69.50%
+Epoch 91/100, Train Loss: 1.014447, Train Acc: 64.68%, Val Loss: 0.898666, Val Acc: 69.01%
+Epoch 92/100, Train Loss: 1.013906, Train Acc: 64.75%, Val Loss: 0.905558, Val Acc: 69.16%
+Epoch 93/100, Train Loss: 1.014410, Train Acc: 64.83%, Val Loss: 0.897128, Val Acc: 69.17%
+Epoch 94/100, Train Loss: 1.013997, Train Acc: 64.68%, Val Loss: 0.896208, Val Acc: 69.30%
+Epoch 95/100, Train Loss: 1.012077, Train Acc: 64.77%, Val Loss: 0.893229, Val Acc: 69.92%
+Epoch 96/100, Train Loss: 1.013340, Train Acc: 64.73%, Val Loss: 0.896980, Val Acc: 69.26%
+Epoch 97/100, Train Loss: 1.012719, Train Acc: 64.55%, Val Loss: 0.890088, Val Acc: 69.75%
+Epoch 98/100, Train Loss: 1.005914, Train Acc: 64.95%, Val Loss: 0.894355, Val Acc: 69.38%
+Epoch 99/100, Train Loss: 1.008390, Train Acc: 64.81%, Val Loss: 0.902308, Val Acc: 69.03%
+Epoch 100/100, Train Loss: 1.003624, Train Acc: 65.03%, Val Loss: 0.895437, Val Acc: 69.32%
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.6932}]
+Valore m[value]:  0.6932
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.6932
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 1.009256, Train Acc: 64.62%, Val Loss: 0.888704, Val Acc: 69.48%
+Epoch 2/100, Train Loss: 1.001524, Train Acc: 65.20%, Val Loss: 0.889659, Val Acc: 69.56%
+Epoch 3/100, Train Loss: 1.000734, Train Acc: 65.24%, Val Loss: 0.891657, Val Acc: 69.76%
+Epoch 4/100, Train Loss: 1.005108, Train Acc: 64.92%, Val Loss: 0.895835, Val Acc: 69.53%
+Epoch 5/100, Train Loss: 1.004958, Train Acc: 64.93%, Val Loss: 0.889760, Val Acc: 69.61%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.6891}]
+Valore m[value]:  0.6891
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.6891
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 1.001543, Train Acc: 65.06%, Val Loss: 0.890691, Val Acc: 69.31%
+Epoch 2/100, Train Loss: 1.000943, Train Acc: 64.91%, Val Loss: 0.884889, Val Acc: 69.56%
+Epoch 3/100, Train Loss: 1.001877, Train Acc: 65.01%, Val Loss: 0.884273, Val Acc: 70.07%
+Epoch 4/100, Train Loss: 0.998307, Train Acc: 65.25%, Val Loss: 0.902539, Val Acc: 69.10%
+Epoch 5/100, Train Loss: 1.000300, Train Acc: 65.16%, Val Loss: 0.881424, Val Acc: 69.99%
+Epoch 6/100, Train Loss: 0.993802, Train Acc: 65.54%, Val Loss: 0.884725, Val Acc: 69.94%
+Epoch 7/100, Train Loss: 0.999431, Train Acc: 65.12%, Val Loss: 0.882743, Val Acc: 70.16%
+Epoch 8/100, Train Loss: 0.995715, Train Acc: 65.37%, Val Loss: 0.878591, Val Acc: 70.15%
+Epoch 9/100, Train Loss: 0.990969, Train Acc: 65.43%, Val Loss: 0.890774, Val Acc: 69.51%
+Epoch 10/100, Train Loss: 0.993940, Train Acc: 65.47%, Val Loss: 0.883320, Val Acc: 70.05%
+Epoch 11/100, Train Loss: 0.990265, Train Acc: 65.48%, Val Loss: 0.875045, Val Acc: 70.21%
+Epoch 12/100, Train Loss: 0.991940, Train Acc: 65.29%, Val Loss: 0.882651, Val Acc: 69.99%
+Epoch 13/100, Train Loss: 0.988299, Train Acc: 65.57%, Val Loss: 0.884989, Val Acc: 69.87%
+Epoch 14/100, Train Loss: 0.992305, Train Acc: 65.63%, Val Loss: 0.884847, Val Acc: 69.92%
+Epoch 15/100, Train Loss: 0.991845, Train Acc: 65.47%, Val Loss: 0.877399, Val Acc: 70.00%
+Epoch 16/100, Train Loss: 0.988274, Train Acc: 65.54%, Val Loss: 0.874498, Val Acc: 70.33%
+Epoch 17/100, Train Loss: 0.985121, Train Acc: 65.95%, Val Loss: 0.877874, Val Acc: 69.98%
+Epoch 18/100, Train Loss: 0.987082, Train Acc: 65.67%, Val Loss: 0.873341, Val Acc: 70.19%
+Epoch 19/100, Train Loss: 0.991193, Train Acc: 65.46%, Val Loss: 0.881951, Val Acc: 69.51%
+Epoch 20/100, Train Loss: 0.987679, Train Acc: 65.66%, Val Loss: 0.871008, Val Acc: 70.21%
+Epoch 21/100, Train Loss: 0.982370, Train Acc: 65.74%, Val Loss: 0.883388, Val Acc: 69.66%
+Epoch 22/100, Train Loss: 0.981996, Train Acc: 65.74%, Val Loss: 0.871807, Val Acc: 70.17%
+Epoch 23/100, Train Loss: 0.977354, Train Acc: 65.87%, Val Loss: 0.877140, Val Acc: 70.22%
+Epoch 24/100, Train Loss: 0.975117, Train Acc: 66.14%, Val Loss: 0.877423, Val Acc: 70.29%
+Epoch 25/100, Train Loss: 0.981072, Train Acc: 65.98%, Val Loss: 0.866762, Val Acc: 70.42%
+Epoch 26/100, Train Loss: 0.983050, Train Acc: 66.01%, Val Loss: 0.866351, Val Acc: 70.38%
+Epoch 27/100, Train Loss: 0.981532, Train Acc: 65.76%, Val Loss: 0.871013, Val Acc: 70.24%
+Epoch 28/100, Train Loss: 0.978919, Train Acc: 65.96%, Val Loss: 0.871145, Val Acc: 70.28%
+Epoch 29/100, Train Loss: 0.979703, Train Acc: 65.94%, Val Loss: 0.865196, Val Acc: 70.76%
+Epoch 30/100, Train Loss: 0.978121, Train Acc: 66.08%, Val Loss: 0.865741, Val Acc: 70.47%
+Epoch 31/100, Train Loss: 0.973486, Train Acc: 66.07%, Val Loss: 0.861978, Val Acc: 70.52%
+Epoch 32/100, Train Loss: 0.971726, Train Acc: 65.99%, Val Loss: 0.867749, Val Acc: 70.51%
+Epoch 33/100, Train Loss: 0.976956, Train Acc: 65.81%, Val Loss: 0.865244, Val Acc: 70.36%
+Epoch 34/100, Train Loss: 0.969158, Train Acc: 66.22%, Val Loss: 0.867560, Val Acc: 70.69%
+Epoch 35/100, Train Loss: 0.974773, Train Acc: 66.01%, Val Loss: 0.866274, Val Acc: 71.03%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7029}]
+Valore m[value]:  0.7029
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7029
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.969316, Train Acc: 66.39%, Val Loss: 0.861284, Val Acc: 70.96%
+Epoch 2/100, Train Loss: 0.971264, Train Acc: 66.17%, Val Loss: 0.870996, Val Acc: 70.15%
+Epoch 3/100, Train Loss: 0.975338, Train Acc: 65.83%, Val Loss: 0.857459, Val Acc: 70.75%
+Epoch 4/100, Train Loss: 0.969978, Train Acc: 66.31%, Val Loss: 0.862671, Val Acc: 70.86%
+Epoch 5/100, Train Loss: 0.967501, Train Acc: 66.25%, Val Loss: 0.859694, Val Acc: 71.04%
+Epoch 6/100, Train Loss: 0.968590, Train Acc: 66.43%, Val Loss: 0.864705, Val Acc: 70.61%
+Epoch 7/100, Train Loss: 0.968072, Train Acc: 66.27%, Val Loss: 0.863409, Val Acc: 70.73%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7086}]
+Valore m[value]:  0.7086
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7086
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.966740, Train Acc: 66.38%, Val Loss: 0.865032, Val Acc: 70.52%
+Epoch 2/100, Train Loss: 0.966125, Train Acc: 66.38%, Val Loss: 0.857031, Val Acc: 70.99%
+Epoch 3/100, Train Loss: 0.965498, Train Acc: 66.48%, Val Loss: 0.865039, Val Acc: 70.52%
+Epoch 4/100, Train Loss: 0.963278, Train Acc: 66.66%, Val Loss: 0.852154, Val Acc: 71.16%
+Epoch 5/100, Train Loss: 0.964847, Train Acc: 66.47%, Val Loss: 0.861078, Val Acc: 70.81%
+Epoch 6/100, Train Loss: 0.964130, Train Acc: 66.71%, Val Loss: 0.853500, Val Acc: 70.90%
+Epoch 7/100, Train Loss: 0.959665, Train Acc: 66.74%, Val Loss: 0.863223, Val Acc: 70.38%
+Epoch 8/100, Train Loss: 0.959650, Train Acc: 66.56%, Val Loss: 0.862865, Val Acc: 70.55%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7072}]
+Valore m[value]:  0.7072
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7072
+	Requirements not satisfied! Continue training ... 
+Reached half of the maximum attempts, reallocating model...
+Epoch 1/100, Train Loss: 0.961112, Train Acc: 66.56%, Val Loss: 0.866987, Val Acc: 70.10%
+Epoch 2/100, Train Loss: 0.961096, Train Acc: 66.63%, Val Loss: 0.859678, Val Acc: 70.80%
+Epoch 3/100, Train Loss: 0.959938, Train Acc: 66.68%, Val Loss: 0.857832, Val Acc: 70.69%
+Epoch 4/100, Train Loss: 0.960434, Train Acc: 66.41%, Val Loss: 0.850341, Val Acc: 71.30%
+Epoch 5/100, Train Loss: 0.955059, Train Acc: 66.71%, Val Loss: 0.863042, Val Acc: 70.18%
+Epoch 6/100, Train Loss: 0.959342, Train Acc: 66.49%, Val Loss: 0.850533, Val Acc: 71.06%
+Epoch 7/100, Train Loss: 0.955104, Train Acc: 67.00%, Val Loss: 0.859160, Val Acc: 70.45%
+Epoch 8/100, Train Loss: 0.957780, Train Acc: 66.85%, Val Loss: 0.854834, Val Acc: 71.17%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7096}]
+Valore m[value]:  0.7096
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7096
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.954362, Train Acc: 66.75%, Val Loss: 0.849598, Val Acc: 71.43%
+Epoch 2/100, Train Loss: 0.956440, Train Acc: 66.82%, Val Loss: 0.852456, Val Acc: 70.96%
+Epoch 3/100, Train Loss: 0.954811, Train Acc: 66.81%, Val Loss: 0.847740, Val Acc: 71.16%
+Epoch 4/100, Train Loss: 0.957845, Train Acc: 66.57%, Val Loss: 0.848769, Val Acc: 71.17%
+Epoch 5/100, Train Loss: 0.955133, Train Acc: 67.04%, Val Loss: 0.849057, Val Acc: 71.23%
+Epoch 6/100, Train Loss: 0.953868, Train Acc: 66.71%, Val Loss: 0.846106, Val Acc: 71.48%
+Epoch 7/100, Train Loss: 0.949190, Train Acc: 67.07%, Val Loss: 0.841156, Val Acc: 71.23%
+Epoch 8/100, Train Loss: 0.951446, Train Acc: 66.85%, Val Loss: 0.852879, Val Acc: 70.54%
+Epoch 9/100, Train Loss: 0.946570, Train Acc: 67.09%, Val Loss: 0.852180, Val Acc: 71.03%
+Epoch 10/100, Train Loss: 0.947290, Train Acc: 67.14%, Val Loss: 0.845512, Val Acc: 71.55%
+Epoch 11/100, Train Loss: 0.951461, Train Acc: 67.02%, Val Loss: 0.842840, Val Acc: 71.39%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7176}]
+Valore m[value]:  0.7176
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7176
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.950251, Train Acc: 67.13%, Val Loss: 0.855047, Val Acc: 70.98%
+Epoch 2/100, Train Loss: 0.947796, Train Acc: 67.13%, Val Loss: 0.849027, Val Acc: 70.96%
+Epoch 3/100, Train Loss: 0.949718, Train Acc: 66.93%, Val Loss: 0.845309, Val Acc: 71.45%
+Epoch 4/100, Train Loss: 0.944730, Train Acc: 67.17%, Val Loss: 0.840826, Val Acc: 71.53%
+Epoch 5/100, Train Loss: 0.946187, Train Acc: 67.17%, Val Loss: 0.838708, Val Acc: 71.54%
+Epoch 6/100, Train Loss: 0.944672, Train Acc: 67.16%, Val Loss: 0.850747, Val Acc: 71.25%
+Epoch 7/100, Train Loss: 0.945667, Train Acc: 67.30%, Val Loss: 0.838238, Val Acc: 71.40%
+Epoch 8/100, Train Loss: 0.941308, Train Acc: 67.41%, Val Loss: 0.845072, Val Acc: 71.40%
+Epoch 9/100, Train Loss: 0.948405, Train Acc: 67.25%, Val Loss: 0.846407, Val Acc: 70.96%
+Epoch 10/100, Train Loss: 0.941461, Train Acc: 67.48%, Val Loss: 0.858192, Val Acc: 70.70%
+Epoch 11/100, Train Loss: 0.941804, Train Acc: 67.43%, Val Loss: 0.841215, Val Acc: 71.62%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7145}]
+Valore m[value]:  0.7145
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7145
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.946808, Train Acc: 67.09%, Val Loss: 0.835226, Val Acc: 71.77%
+Epoch 2/100, Train Loss: 0.940413, Train Acc: 67.23%, Val Loss: 0.833641, Val Acc: 71.85%
+Epoch 3/100, Train Loss: 0.938977, Train Acc: 67.35%, Val Loss: 0.840410, Val Acc: 71.55%
+Epoch 4/100, Train Loss: 0.937966, Train Acc: 67.49%, Val Loss: 0.834983, Val Acc: 71.96%
+Epoch 5/100, Train Loss: 0.939464, Train Acc: 67.59%, Val Loss: 0.836798, Val Acc: 71.53%
+Epoch 6/100, Train Loss: 0.941644, Train Acc: 67.31%, Val Loss: 0.837096, Val Acc: 71.60%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.717}]
+Valore m[value]:  0.717
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.717
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.938539, Train Acc: 67.37%, Val Loss: 0.839908, Val Acc: 71.33%
+Epoch 2/100, Train Loss: 0.937383, Train Acc: 67.75%, Val Loss: 0.831974, Val Acc: 71.76%
+Epoch 3/100, Train Loss: 0.937467, Train Acc: 67.58%, Val Loss: 0.851970, Val Acc: 70.96%
+Epoch 4/100, Train Loss: 0.934847, Train Acc: 67.43%, Val Loss: 0.836334, Val Acc: 71.86%
+Epoch 5/100, Train Loss: 0.933004, Train Acc: 67.58%, Val Loss: 0.833177, Val Acc: 71.69%
+Epoch 6/100, Train Loss: 0.932277, Train Acc: 67.56%, Val Loss: 0.833097, Val Acc: 72.07%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7157}]
+Valore m[value]:  0.7157
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7157
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.931965, Train Acc: 67.60%, Val Loss: 0.837934, Val Acc: 71.49%
+Epoch 2/100, Train Loss: 0.935225, Train Acc: 67.67%, Val Loss: 0.845456, Val Acc: 71.61%
+Epoch 3/100, Train Loss: 0.937763, Train Acc: 67.30%, Val Loss: 0.832977, Val Acc: 71.91%
+Epoch 4/100, Train Loss: 0.931262, Train Acc: 67.68%, Val Loss: 0.829346, Val Acc: 72.12%
+Epoch 5/100, Train Loss: 0.933739, Train Acc: 67.54%, Val Loss: 0.839433, Val Acc: 71.45%
+Epoch 6/100, Train Loss: 0.931092, Train Acc: 67.39%, Val Loss: 0.836933, Val Acc: 71.67%
+Epoch 7/100, Train Loss: 0.927975, Train Acc: 67.78%, Val Loss: 0.835413, Val Acc: 71.62%
+Epoch 8/100, Train Loss: 0.929708, Train Acc: 67.63%, Val Loss: 0.850610, Val Acc: 70.88%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7166}]
+Valore m[value]:  0.7166
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7166
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.931466, Train Acc: 67.66%, Val Loss: 0.834324, Val Acc: 71.79%
+Epoch 2/100, Train Loss: 0.929590, Train Acc: 67.48%, Val Loss: 0.823924, Val Acc: 72.08%
+Epoch 3/100, Train Loss: 0.931669, Train Acc: 67.78%, Val Loss: 0.833601, Val Acc: 71.88%
+Epoch 4/100, Train Loss: 0.928295, Train Acc: 67.83%, Val Loss: 0.832950, Val Acc: 71.55%
+Epoch 5/100, Train Loss: 0.925353, Train Acc: 67.86%, Val Loss: 0.833579, Val Acc: 71.66%
+Epoch 6/100, Train Loss: 0.928752, Train Acc: 67.76%, Val Loss: 0.830166, Val Acc: 71.61%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7153}]
+Valore m[value]:  0.7153
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7153
+	Requirements not satisfied! Continue training ... 
+Epoch 1/100, Train Loss: 0.925961, Train Acc: 67.74%, Val Loss: 0.824041, Val Acc: 72.26%
+Epoch 2/100, Train Loss: 0.925290, Train Acc: 67.85%, Val Loss: 0.826615, Val Acc: 72.16%
+Epoch 3/100, Train Loss: 0.925638, Train Acc: 67.83%, Val Loss: 0.827795, Val Acc: 71.82%
+Epoch 4/100, Train Loss: 0.923347, Train Acc: 67.76%, Val Loss: 0.825984, Val Acc: 71.80%
+Epoch 5/100, Train Loss: 0.930431, Train Acc: 67.63%, Val Loss: 0.826587, Val Acc: 71.97%
+Early stopping triggered.
+Training is regular! Checking model requirements ...
+Metrics computed = [{'name': 'accuracy', 'value': 0.7185}]
+Valore m[value]:  0.7185
+	Metric 'accuracy' not satisfied!
+	Required 'accuracy' = 0.75 | Computed 'accuracy' = 0.7185
+	Requirements not satisfied! Continue training ... 
+Loading latest functioning Network...
+Original model size:  222.50542163848877 MB
+Reduced model size:  0.6086320877075195 MB
+Parameters Reduction Ratio:  99.73021890793918
+Sequential(
+  (0): Sequential(
+    (0): Conv2d(3, 6, kernel_size=(11, 11), stride=(4, 4))
+    (1): BatchNorm2d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (1): Sequential(
+    (0): Conv2d(6, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (2): Sequential(
+    (0): Conv2d(24, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (3): Sequential(
+    (0): AdaptiveAvgPool2d(output_size=(6, 6))
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=576, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=256, out_features=10, bias=True)
+  )
+)
+Network Reduced in 16440.316038834862 s
