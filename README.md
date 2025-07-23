@@ -40,6 +40,7 @@ pip install -r requirements.txt
 │   ├── index.html             # Main interface
 │   ├── script.js              # Logic for sending model and parameters
 │   └── style.css              # UI styling
+│
 ├── experiments/               # Images and log files 
 │   ├── LAEorig.png
 │   ├── LAEred.png
