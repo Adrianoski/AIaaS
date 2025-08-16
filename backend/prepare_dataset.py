@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
+import torchvision
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
 import torch.nn as nn
 
 criterion = nn.MSELoss()
@@ -74,8 +77,34 @@ def prepare_dataset_from_json(json_input, base_path='', window_size=50, stride=5
         ctx.val_loader = val_loader
         ctx.val_data = val_data
         ctx.train_data = train_data
+        return train_loader, val_loader, test_loader
+    
+    elif dataset_name == 'CIFAR10':
+        transform_train = transforms.Compose([
+        #transforms.Resize((227,227)),
+        transforms.RandomCrop(32, padding=4),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.4914, 0.4822, 0.4465],
+                            std=[0.2023, 0.1994, 0.2010])
+    ])
 
-    return train_loader, val_loader, test_loader
+    transform_test = transforms.Compose([
+        #transforms.Resize((227,227)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.4914, 0.4822, 0.4465],
+                            std=[0.2023, 0.1994, 0.2010])
+    ])
+
+
+    trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
+    testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform_test)
+
+    trainloader = DataLoader(trainset, batch_size=128, shuffle=True, num_workers=2)
+    testloader = DataLoader(testset, batch_size=128, shuffle=False, num_workers=2)
+    ctx.val_loader = testloader
+    ctx.val_data = testloader
+    ctx.train_data = trainloader
 
 def test_func(model,test_loader):
     outputs=[]
